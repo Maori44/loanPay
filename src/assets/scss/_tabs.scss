@@ -1,0 +1,257 @@
+@import "./theme/variables";
+
+.tab-wrapper {
+  .tab-inner {
+    > .section-row {
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .form-view-mode {
+    .row > * {
+      padding: 0;
+      @media (max-width: 767px) {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+    .link-row {
+      padding: 0 0 0 20px;
+    }
+    .form-group {
+      label {
+        font-size: 26px;
+        color: #9a9da1;
+        padding: 0 16px 0 20px;
+        margin: 0;
+        line-height: normal;
+        @media (max-width: 767px) {
+          font-size: 18px;
+          padding: 0;
+        }
+      }
+      .form-control {
+        border-color: rgba(112, 112, 112, 0.13);
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-radius: 0;
+        box-shadow: none;
+        padding-left: 20px;
+        height: 35px;
+        font-size: 20px;
+        &:focus {
+          border-color: #86b7fe;
+        }
+        @media (max-width: 767px) {
+          padding-left: 0;
+          font-size: 18px;
+        }
+      }
+      .form-control:disabled,
+      .form-control[readonly] {
+        background-color: transparent;
+      }
+    }
+  }
+  .tab-container {
+    .nav {
+      justify-content: center;
+      font-size: 18px;
+      color: $base-color;
+
+      .icons-cell {
+        font-size: 23px;
+        font-weight: normal;
+        margin-bottom: 9px;
+      }
+    }
+
+    .nav-tabs {
+      border: none;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      white-space: nowrap;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        height: 3px;
+        background: #e5e5e5;
+      }
+      .nav-item {
+        display: inline-flex;
+        position: relative;
+        z-index: 1;
+        .nav-link {
+          display: inline-flex;
+          color: $base-color;
+          background: transparent;
+          padding: 17px 45px 10px;
+          border: none;
+          border-bottom: 3px solid transparent;
+          margin: 0;
+
+          * {
+            cursor: pointer;
+          }
+          &:hover {
+            border-bottom: 3px solid rgba($primary2, 0.5);
+          }
+          @media (max-width: 1400px) {
+            padding-left: 34px;
+            padding-right: 34px;
+          }
+          @media (max-width: 640px) {
+            padding: 17px 10px 10px;
+            font-size: 16px;
+          }
+          .nav-btn-cell {
+            .txt-cell {
+              margin-top: auto;
+            }
+          }
+        }
+      }
+
+      .nav-link.active {
+        border-bottom: 3px solid $primary2;
+        color: $primary2;
+      }
+    }
+
+    .tab-content {
+      padding: 40px 50px 40px;
+
+      @media (max-width: 1150px) {
+        padding: 30px 20px 30px;
+      }
+    }
+    a {
+      color: $primary2;
+      &:hover {
+        color: $primary2-dark;
+      }
+    }
+  }
+  .tab-container.tab-content-padd-type2 {
+    .tab-content {
+      padding: 28px 0 0;
+    }
+  }
+  .tab-container.light-tab-nav {
+    .nav {
+      .nav-link {
+        color: #9a9da1;
+        .icons-cell {
+          font-size: 17px;
+        }
+        &:hover {
+          border-bottom: 3px solid $primary2;
+          label {
+            color: $primary2;
+          }
+        }
+      }
+      .nav-link.active {
+        border-bottom: 3px solid $primary2;
+        label {
+          color: $primary2;
+        }
+      }
+    }
+  }
+  .tab-container.tab-nav-start {
+    .nav {
+      justify-content: flex-start;
+    }
+  }
+  .tab-container.tab-nav-equal {
+    .nav {
+      justify-content: space-between;
+    }
+  }
+
+  // tab-style2
+  .tab-container.tab-style2 {
+    > .tab-content {
+      padding: 0;
+    }
+    > .nav-tabs {
+      margin-bottom: 45px;
+      border-bottom: none;
+      &::after {
+        display: none;
+      }
+      .nav-link {
+        border-radius: 4px;
+        border: 1px solid #c8c8c8;
+        margin-right: 5px;
+        padding: 15px;
+        min-width: 96px;
+        min-height: 96px;
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .icon-1 {
+          color: #c5c539;
+        }
+        .icon-2 {
+          color: #00c2ff;
+        }
+        label {
+          font-size: 13px;
+          font-weight: bold;
+        }
+        &:hover {
+          border: 1px solid $primary;
+        }
+      }
+      .nav-link.active {
+        border: 1px solid $primary;
+      }
+    }
+  }
+}
+.tab-container.type2 {
+  .nav {
+    justify-content: flex-start;
+  }
+  .tab-content {
+    padding: 28px 0 0;
+  }
+}
+
+.tab-wrapper.organization-tabs {
+  > .inner {
+    padding: 40px 50px 40px;
+    @media (max-width: 1150px) {
+      padding: 20px;
+    }
+    .nav-tabs {
+      margin-bottom: 23px;
+      .nav-item {
+        padding: 0 30px;
+        @media (max-width: 1150px) {
+          padding: 0 10px;
+        }
+        .nav-link {
+          padding: 17px 30px 10px;
+          @media (max-width: 1150px) {
+            padding: 17px 17px 10px;
+          }
+        }
+      }
+    }
+    .tab-content {
+      border-radius: 5px;
+      box-shadow: 0 3px 12px #bfbfbf;
+      border: none;
+      background-color: #fff;
+    }
+  }
+}

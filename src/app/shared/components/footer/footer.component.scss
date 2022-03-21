@@ -1,0 +1,11 @@
+:host {
+  margin-top: auto;
+}
+.footer {
+  font-size: 14px;
+  color: #707070;
+  padding: 17px 34px;
+  @media (max-width: 767px) {
+    padding: 0 20px 16px;
+  }
+}

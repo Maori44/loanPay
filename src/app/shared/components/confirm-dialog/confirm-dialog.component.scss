@@ -1,0 +1,195 @@
+table {
+  width: 100%;
+}
+.close-btn {
+  position: relative;
+  box-shadow: none;
+  border: none;
+  background: none;
+}
+.close-btn button:hover {
+  box-shadow: none;
+  border: none;
+  background: none;
+}
+.close-btn button:focus {
+  outline: 0;
+  background: none;
+  border: none;
+}
+.close-btn button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  background: none;
+  color: #fff;
+  border: none;
+}
+
+.dialogBoxInfo h2 {
+  font-size: 20px;
+  padding: 15px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.dialogBoxInfo h3 {
+  font-size: 18px;
+  color: #0066b3;
+  font-weight: 600;
+  margin-bottom: 10px 0;
+}
+.dialogBoxInfo h2 {
+  background: transparent linear-gradient(180deg, #0066b3 0%, #00328e 100%) 0% 0% no-repeat padding-box;
+  margin-bottom: 0;
+}
+.dialogBoxInfo label {
+  color: #333;
+  width: 100%;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+.dialogBoxInfo p {
+  color: #333;
+  font-weight: 300;
+  margin-bottom: 15px;
+}
+.dialogBoxInfo form {
+  margin-bottom: 10px;
+}
+
+.submit_referal {
+  text-align: center;
+  padding: 15px 0;
+}
+.add-primary-btn {
+  margin-left: 15px;
+}
+
+.side_corresule ul {
+  padding-left: 0;
+}
+
+.side_corresule ul li {
+  list-style: none;
+}
+.side_corresule ul li i {
+  padding-left: 10px;
+}
+.label-bold {
+  font-weight: 500 !important;
+
+  display: flex !important;
+  font-size: 14px !important;
+}
+
+.Spiritual_history {
+  padding-bottom: 10px;
+  color: #333;
+}
+.Spiritual_history ul {
+  list-style: none;
+  padding-left: 30px;
+}
+.Spiritual_history ul li {
+  margin-bottom: 10px;
+}
+.Spiritual_history .uplaod_pic {
+  max-width: 100%;
+  border: 2px dashed #dbdbdb;
+  border-radius: 0;
+  position: relative;
+}
+.Spiritual_history .uplaod_pic img {
+  bottom: 15px;
+  width: 50px;
+  position: relative;
+  color: #b2b2b2;
+}
+.select-files {
+  color: #bfbfbf;
+  position: absolute;
+  font-size: 14px;
+  top: 35px;
+  width: 100%;
+}
+.select-files span {
+  color: #1939c5;
+}
+
+.uplaod_pic {
+  max-width: 150px;
+  position: relative;
+  border-radius: 100px;
+  margin-bottom: 15px;
+  overflow: hidden;
+  border: 1px solid #e5e9ef;
+}
+.Spiritual_history .uplaod_pic .browse {
+  background: none !important;
+}
+.cross-delete {
+  color: #ff3b3b;
+}
+.edit-purple {
+  color: #4c71f0;
+}
+.uplaod_pic .browse {
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+  vertical-align: middle;
+  z-index: 1;
+  height: 150px;
+  line-height: 150px;
+  min-width: 100%;
+  color: rgba(0, 0, 0, 0.3);
+  transition: all 450ms cubic-bezier(0.23, 1, 0.32, 1) 0ms;
+  border-radius: 100px;
+  overflow: hidden;
+  background-color: #e5e9ef;
+  text-align: center;
+}
+.uplaod_pic .browse:hover {
+  border-color: rgba(0, 0, 0, 0.5);
+  color: rgba(0, 0, 0, 0.5);
+}
+.uplaod_pic i {
+  cursor: pointer;
+  position: relative;
+  z-index: 5;
+}
+.uplaod_pic input {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  width: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+.ins_photo {
+  color: #7a7a7a;
+  float: left;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 16px;
+  margin: 0 0 15px 0;
+}
+
+.confirm-dialog-section {
+  padding: 15px;
+}
+.confirm-dialog-section p {
+  margin: 0;
+}
+
+::ng-deep .mat-dialog-container {
+  padding: 0px !important;
+  overflow: hidden !important;
+}
+.btn-space{
+  margin-right: 6px;
+}

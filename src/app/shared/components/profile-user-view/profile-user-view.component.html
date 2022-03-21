@@ -1,0 +1,481 @@
+<div class="page-inner with-breadcrumb layout-md">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <!-- <li class="breadcrumb-item"><a href="/{{routerPath}}/manage-staff/view-staff">User Management</a></li> -->
+            <li class="breadcrumb-item">User Management</li>
+            <li class="breadcrumb-item active" aria-current="page">Profile</li>
+        </ol>
+    </nav>
+    <section class="section-row">
+        <div class="card-wrapper">
+            <div class="inner-body">
+                <div class="tab-wrapper">
+                    <form [formGroup]="Form">
+                        <tabset #tabset>
+                            <tab>
+                                <ng-template tabHeading>
+                                    <span class="d-inline-flex flex-column text-center">
+                                        <span class="icon-user-line icons-cell">
+                                        </span>
+                                        <label>
+                                            Account
+                                        </label>
+                                    </span>
+                                </ng-template>
+                                <div class="tab-inner">
+                                    <section class="section-row">
+                                        <div class="form-wrapper">
+                                            <div class="row">
+                                                <div class="col-md-5 col-lg-4 col-xl-3">
+                                                    <!-- <div
+                                                        class="user-pic-blc account-tab d-flex flex-column align-items-center text-center layout-md">
+                                                        <div
+                                                            class="user-pic d-inline-flex flex-column justify-content-center">
+                                                            <div class="pic-cell rounded-circle">
+                                                                <ngx-avatar *ngIf="isUploadForLogo" size="100"
+                                                                    value="28%" [round]="false" class="clickable"
+                                                                    src="{{imagePreviewForLogo}}">
+                                                                </ngx-avatar>
+                                                            </div>
+                                                            <div class="txt-cell">
+                                                                {{tempData.firstName + " " + tempData.lastName}}
+                                                            </div>
+                                                        </div>
+                                                        <button class="btn btn-primary2 position-relative upload-btn">
+                                                            <div *ngIf="isUploaddoneForLogo"
+                                                                class="inner d-flex flex-column text-center">
+                                                                <span class="icon-arrow-upload">
+                                                                </span>
+                                                                <span class="txt">
+                                                                    UPLOAD
+                                                                </span>
+                                                            </div>
+                                                            <input type="file" class="position-absolute"
+                                                                [attr.disabled]="!IsViewOnly ? '' : null"
+                                                                (change)="selectFile($event)">
+                                                        </button>
+                                                    </div> -->
+                                                    <div class="upload-wrapper d-flex justify-content-center">
+                                                        <div class="upload-cell ms-4">
+                                                            <div
+                                                                class="upload-btn position-relative d-flex flex-column justify-content-center align-items-center">
+                                                                <input type="file" class="position-absolute"
+                                                                    [attr.disabled]="!IsViewOnly ? '' : null"
+                                                                    (change)="selectFile($event)">
+                                                                <div *ngIf="isUploaddoneForProfile"
+                                                                    class="inner d-flex flex-column text-center">
+                                                                    <span class="icon-arrow-upload">
+                                                                    </span>
+                                                                    <span class="txt">
+                                                                        UPLOAD
+                                                                    </span>
+                                                                </div>
+                                                                <ngx-avatar *ngIf="isUploadForProfile" size="100"
+                                                                    value="28%" [round]="false" class="clickable"
+                                                                    src="{{imagePreviewForProfile}}">
+                                                                </ngx-avatar>
+                                                            </div> 
+                                                            <div class="txt-cell h5 mt-3 w-25">
+                                                                {{tempData?.firstName + " " + tempData?.lastName}}
+                                                            </div>                                                         
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 col-lg-8 col-xl-9 form-view-mode">
+                                                    <div class="row">
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="userCode">
+                                                                    Code
+                                                                </label>
+                                                                <input disabled id="userCode"
+                                                                    type="userCode" name="userCode"
+                                                                    formControlName="userCode" class="form-control">
+                                                                <div class="invalid-feedback">
+                                                                    Field Error Message.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-lg-6">
+                                                            <div class="form-group">
+                                                                <label for="lastLogin">
+                                                                    Last Login
+                                                                </label>
+                                                                <input disabled id="lastLogin" type="lastLogin"
+                                                                    formControlName="lastLogin" name="name1"
+                                                                    class="form-control">
+                                                                <div class="invalid-feedback">
+                                                                    Field Error Message.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="userName">
+                                                                    Username
+                                                                </label>
+                                                                <input disabled id="username" type="userName" name="name1"
+                                                                    formControlName="userName" class="form-control">
+                                                                <div class="invalid-feedback">
+                                                                    Field Error Message.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="activeInactive">
+                                                                    Active/Inactive
+                                                                </label>
+                                                                <input disabled id="activeInactive" type="activeInactive"
+                                                                    formControlName="activeInactive" name="name1"
+                                                                    class="form-control">
+                                                                <div class="invalid-feedback">
+                                                                    Field Error Message.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="blockUnblock">
+                                                                    Block/Unblock
+                                                                </label>
+                                                                <input disabled id="blockUnblock" type="blockUnblock"
+                                                                    formControlName="blockUnblock" name="name1"
+                                                                    class="form-control">
+                                                                <div class="invalid-feedback">
+                                                                    Field Error Message.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <!-- <div class="col-md-12 link-row">
+                                                          <a href="">Change Password</a>
+                                                      </div> -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </tab>
+                            <tab>
+                                <ng-template tabHeading>
+                                    <span class="d-inline-flex flex-column text-center">
+                                        <span class="icon-user-line icons-cell">
+                                        </span>
+                                        <label>
+                                            Demographic
+                                        </label>
+                                    </span>
+                                </ng-template>
+                                <div class="tab-inner">
+                                    <section class="section-row">
+                                        <div class="form-wrapper">
+
+                                            <div class="row">
+
+                                                <p>{{manageUserList?.email}}</p>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="firstName">
+                                                            First Name<span class="text-danger">*</span>
+                                                        </label>
+                                                        <input id="firstName" type="text" name="firstName"
+                                                            formControlName="firstName" class="form-control">
+                                                            <div *ngIf="submitted && Form.controls.firstName.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.firstName.errors?.required">
+                                                                First Name is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="middleName">
+                                                            Middle Name<span class="text-danger">*</span>
+                                                        </label>
+                                                        <input id="middleName" type="text" name="middleName"
+                                                            formControlName="middleName" class="form-control">
+                                                            <div *ngIf="submitted && Form.controls.middleName.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.middleName.errors?.required">
+                                                                Middle Name is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="lastName">
+                                                            Last Name<span class="text-danger">*</span>
+                                                        </label>
+                                                        <input id="lastName" type="text" name="lastName"
+                                                            formControlName="lastName" class="form-control">
+                                                            <div *ngIf="submitted && Form.controls.lastName.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.lastName.errors?.required">
+                                                                Last Name is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="maidenName">
+                                                            Maiden Name<span class="text-danger">*</span>
+                                                        </label>
+                                                        <input id="maidenName" type="text" name="maidenName"
+                                                            formControlName="maidenName" class="form-control">
+                                                            <div *ngIf="submitted && Form.controls.maidenName.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.maidenName.errors?.required">
+                                                                Maiden Name is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>                                               
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="dob">
+                                                            Date of Birth<span class="text-danger">*</span>
+                                                        </label>
+                                                        <input id="dob" type="date" name="dob" formControlName="dob"
+                                                            class="form-control">
+                                                            <div *ngIf="submitted && Form.controls.dob.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.dob.errors?.required">
+                                                                dob is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="genderId">
+                                                            Gender<span class="text-danger">*</span>
+                                                        </label>
+                                                        <select class="form-select form-control" id="genderId" required
+                                                            formControlName="genderId">
+                                                            <option value="1">Male</option>
+                                                            <option value="2">Female</option>
+                                                        </select>
+                                                        <div *ngIf="submitted && Form.controls.genderId.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.genderId.errors?.required">
+                                                                Gender is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>                                               
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="nativeSpokenLanguage">
+                                                            Preferred Language of communication<span class="text-danger">*</span>
+                                                        </label>
+                                                        <input id="nativeSpokenLanguage" type="text"
+                                                            formControlName="nativeSpokenLanguage"
+                                                            name="nativeSpokenLanguage" class="form-control">
+                                                            <div *ngIf="submitted && Form.controls.nativeSpokenLanguage.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.nativeSpokenLanguage.errors?.required">
+                                                                Preferred Language of communication is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6">
+
+                                                    <div class="form-group">
+                                                        <label for="Country">
+                                                            Country<span class="text-danger">*</span>
+                                                        </label>
+                                                        <select class="form-select form-control" id="countryID"
+                                                            (change)="selectCountry($event)" 
+                                                            formControlName="countryID" required>
+                                                            <option *ngFor="let CountryItem of CountryList"
+                                                                [value]="CountryItem.countryId">
+                                                                {{CountryItem?.countryName}}</option>
+                                                        </select>
+                                                        <div *ngIf="submitted && Form.controls.countryID.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.countryID.errors?.required">
+                                                                Country is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                  
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="state">
+                                                            State<span class="text-danger">*</span>
+                                                        </label>
+                                                        <select class="form-select form-control" id="state"
+                                                            [attr.disabled]="isStateDisabled ? '' : null"
+                                                            formControlName="state" required>
+                                                            <option *ngFor="let StateItem of StateList"
+                                                                [value]="StateItem.stateName">{{StateItem?.stateName}}
+                                                            </option>
+                                                        </select>
+                                                        <div *ngIf="submitted && Form.controls.state.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.state.errors?.required">
+                                                                State is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>                                                 
+                                                </div>
+                                               
+                                            </div>
+                                            <div class="form-button-rw text-end form-btns mt-3" *ngIf="IsViewOnly">
+                                                <button class="btn btn-primary" (click)="goto(2)">
+                                                    Save and Continue
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </tab>                          
+                            <tab>
+                                <ng-template tabHeading>
+                                    <span class="d-inline-flex flex-column text-center">
+                                        <span class="icon-settting icons-cell">
+                                        </span>
+                                        <label>
+                                            Office Detail
+                                        </label>
+                                    </span>
+                                </ng-template>
+                                <div class="tab-inner">
+                                    <section class="section-row">
+                                        <div class="form-wrapper">
+                                            <div class="row"> 
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="organizationName">
+                                                           Organization Name
+                                                        </label>
+                                                        <input id="organizationName" type="text" name="organizationName"
+                                                            formControlName="organizationName" class="form-control">
+                                                        <div class="invalid-feedback">
+                                                            Field Error Message.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="businessName">
+                                                           Business Name
+                                                        </label>
+                                                        <input id="businessName" type="text" name="businessName"
+                                                            formControlName="businessName" class="form-control">
+                                                        <div class="invalid-feedback">
+                                                            Field Error Message.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-lg-6" *ngIf="isOrganization">
+                                                    <div class="form-group">
+                                                        <label for="subDomainName">
+                                                           SubDomain Name
+                                                        </label>
+                                                        <input id="subDomainName" type="text" name="subDomainName"
+                                                            formControlName="subDomainName" class="form-control">
+                                                        <div class="invalid-feedback">
+                                                            Field Error Message.
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-lg-6" *ngIf="isOrganization">
+                                                    <div class="form-group">
+                                                        <label for="emailAddress">
+                                                            Email Address
+                                                        </label>
+                                                        <input disabled id="emailAddress" type="text" name="emailAddress"
+                                                            formControlName="emailAddress" class="form-control">
+                                                        <div class="invalid-feedback">
+                                                            Field Error Message.
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <!-- <div class="col-lg-12" *ngIf="!isOrganization">
+                                                    <div class="form-group">
+                                                        <label for="emailAddress">
+                                                            Email Address
+                                                        </label>
+                                                        <input disabled id="emailAddress" type="text" name="emailAddress"
+                                                            formControlName="emailAddress" class="form-control">
+                                                        <div class="invalid-feedback">
+                                                            Field Error Message.
+                                                        </div>
+                                                    </div>
+                                                </div> -->
+
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="primaryContactNumber">
+                                                            Primary Contact Number<span class="text-danger">*</span>
+                                                        </label>
+                                                        <input id="primaryContactNumber" type="text" maxlength="10"
+                                                            name="primaryContactNumber"
+                                                            formControlName="primaryContactNumber" class="form-control">
+                                                            <div *ngIf="submitted && Form.controls.primaryContactNumber.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.primaryContactNumber.errors?.required">
+                                                                Primary Contact Number is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6">
+                                                    <div class="form-group">
+                                                        <label for="secondaryContactNumber">
+                                                            Secondary Contact Number<span class="text-danger">*</span>
+                                                        </label>
+                                                        <input id="secondaryContactNumber" type="text" maxlength="10"
+                                                            name="secondaryContactNumber"
+                                                            formControlName="secondaryContactNumber"
+                                                            class="form-control">
+                                                            <div *ngIf="submitted && Form.controls.secondaryContactNumber.errors"
+                                                            class="text-danger">
+                                                            <div class="text-danger"
+                                                                *ngIf="Form.controls.secondaryContactNumber.errors?.required">
+                                                                Secondary Contact Number is required.
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>                                         
+                                            </div>
+                                            <div class="form-btns text-end mt-2" *ngIf="IsViewOnly">
+                                                <button class="btn btn-primary" *ngIf="!isEdit" (click)="onSubmit('save')">
+                                                    Save
+                                                </button>
+                                                <button class="btn btn-primary" *ngIf="isEdit" (click)="onSubmit('edit')">
+                                                    Update
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </section>
+                                </div>
+                            </tab>               
+                        </tabset>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

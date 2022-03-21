@@ -1,0 +1,24 @@
+.section-row {
+  margin-bottom: 40px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  @media (max-width: 767px) {
+    margin-bottom: 25px;
+  }
+}
+.section-row.md,
+.section-space-md .section-row {
+  margin-bottom: 28px;
+}
+.section-row.inputs {
+  margin-bottom: 16px;
+}
+.section-row.breif-col-rw,
+.section-row.breif-col-rw2,
+.section-row.dash-graph-rw {
+  margin-bottom: 23px;
+  @media (max-width: 767px) {
+    margin-bottom: 25px;
+  }
+}

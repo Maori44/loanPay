@@ -1,0 +1,158 @@
+<div class="page-inner layout-md">
+    <section class="section-row">
+        <div class="card-wrapper">
+            <div class="head-blc d-flex align-items-center with-button">
+                <h2>Study Summary</h2>
+                <div class="float-right right-col ms-auto list-filter inputs-thin inputs-primary list-srch d-inline-flex align-items-center">
+                    <button routerLink="/clinical-pool/find-study"
+                     class="btn btn-btn-link back-btn d-inline-flex align-items-center" >
+                       <span class="icon-arrow-left"></span>
+                       Back
+                   </button>
+               </div>
+            </div>
+
+            <div class="inner-body padd">
+                <div class="study-summary-wrapper d-flex">
+                    <div class="left-col flex-fill">
+                        <div class="head">
+                            <h3>
+                                {{csDetailsModelsData?.csTitle}}
+                            </h3>
+                            <h4>
+                                {{csDetailsModelsData?.csOfficialTitle}}
+                            </h4>
+                        </div>
+                        <div class="inner">
+                            <p>
+                                <Strong>Brief Summary :</Strong> {{csDetailsModelsData?.csDescription}}
+                            </p>
+                            <p>
+                                <Strong>Condition or disease :</Strong>
+                                {{csConditionOrDiseaseModelData[0]?.csConditionOrDiseaseText}}
+                            </p>
+                            <p>
+                                <Strong>Intervention/treatment :</Strong>
+                            </p>
+                            <div *ngFor="let csInterventionOrTreatment of csInterventionOrTreatmentModelData">
+                                <ul>
+                                    <li>
+                                        <p>
+                                            {{csInterventionOrTreatment?.csInterventionOrTreatmentText}}
+                                        </p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <p>
+                                <Strong>Phase :</Strong>
+                            </p>
+                            <div *ngFor="let csPhase of csPhaseModelData">
+                                <ul>
+                                    <li>
+                                        <p>Phase {{csPhase?.csPhaseText}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="section-ttl">
+                                <h2>Study Design :</h2>
+                            </div>
+
+                            <p><Strong>Study Type :</Strong> {{csDetailsModelsData.csStudyType == 1 ? 'Interventional
+                                (Clinical Trial)' : 'Observational (Clinical Trial)' }} </p>
+
+                            <p><Strong>Estimated Enrollment :</Strong> {{csDetailsModelsData.csActualEnrollment}}</p>
+                            
+                            <p><Strong>Allocation:</Strong> {{csDetailsModelsData.csAllocation}}</p>
+                           
+                            <p><Strong>Intervention Model:</Strong> {{csDetailsModelsData.csInterventionMode}}</p>
+                           
+                            <p><Strong>Masking:</Strong> {{csDetailsModelsData.csMasking}}</p>
+                           
+                            <p><Strong>Primary Purpose:</Strong> {{csDetailsModelsData.csPrimaryPurpose}}</p>
+                            
+                            <p><Strong>Official Title:</Strong> {{csDetailsModelsData.csOfficialTitle}}</p>
+                           
+                            <p><Strong>Study Start Date :</Strong> {{csDetailsModelsData.csActualStartDate | date :
+                                'mediumDate'}}</p>
+                            
+                            <p><Strong>Estimated Primary Completion Date :</Strong>
+                                {{csDetailsModelsData.csEstPrimaryCompletionDate | date : 'mediumDate'}}
+                            </p>
+                           
+                            <p><Strong>Estimated Study Completion Date :</Strong>
+                                {{csDetailsModelsData.csEstStudyCompletionDate | date : 'mediumDate'}}
+                            </p>
+                            
+                            <div class="section-ttl">
+                                <h2>Arms and Intervention</h2>
+                            </div>
+
+                            <div *ngFor="let armsAndIntervation of csArmsInterventionsModelData">
+                                <ul>
+                                    <li>
+                                        <p>{{armsAndIntervation.csArmsOrIntervention == 1 ? 'Arms' :
+                                            'Intervention'}} :
+                                            {{armsAndIntervation.csArmsInterventionsText}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+                           
+                           <div class="section-ttl">
+                                <h2>Eligibility Criteria</h2>
+                            </div>
+
+                            <div *ngFor="let criteria of csCriteriaModelData">
+                                <p>{{criteria.csInclusionExclusion == 1 ? 'Inclusion Criteria :' :
+                                    'Exclusion Criteria :'}}</p>
+                                <ul>
+                                    <li>
+                                        <p>{{criteria.csCriteriaText}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="section-ttl">
+                                <h2>Outcome Measures</h2>
+                            </div>
+
+                            <div *ngFor="let outcome of csOutcomeMeasuresData">
+                                <p>{{outcome.csPrimarySecondary == 1 ? 'Primary Outcome Measures :' :
+                                    'Secondary Outcome Measures :'}}</p>
+                                <ul>
+                                    <li>
+                                        <p>{{outcome.csOutcomeMeasuresText}}</p>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="section-ttl mt-2">
+                                <h2>More Information</h2>
+                            </div>
+
+                            <p><strong>Sex Eligible for study :</strong> {{genderName}}</p>
+
+                            <p><strong>Studies a US FDA regulated device product :</strong>
+                                {{csDetailsModelsData?.csfdaDeviceProduct == 1 ? 'Yes' : 'No'}}</p>
+
+                            <p><strong>Studies a US FDA regulated drug product :</strong>
+                                {{csDetailsModelsData?.csfdaDrugProduct == 1 ? 'Yes' : 'No'}}</p>
+
+                            <p><strong>Product manufactured in or exported from the US :</strong>
+                                {{csDetailsModelsData?.csProductUSA == 1 ? 'Yes' : 'No'}}</p>
+<!-- 
+                                <p>Contact Person First Name : {{contact?.csContactFirstName}}</p>
+                                <p>Contact Person Middle Name : {{contact?.csContactMiddleName}}</p>
+                                <p>Contact Person Last Name : {{contact?.csContactLastName}}</p>
+                                <p>Contact Person Address : {{contact?.csContactAddress1}}</p>
+                                <p>Contact Person Email Address : {{contact?.csContactEmailAddress1}}</p>
+                                <p>Contact Person Phone Number : {{contact?.csContactPhone1}}</p> -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

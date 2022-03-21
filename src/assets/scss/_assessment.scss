@@ -1,0 +1,32 @@
+@import "../scss/theme/variables";
+
+.assessment-wrapper {
+  .assesment-row {
+    margin-bottom: 24px;
+    h3 {
+      font-size: 20px;
+      font-weight: 700;
+      margin-bottom: 15px;
+    }
+    .text-blc {
+      border: 1px solid #dbd2d2;
+      border-radius: 3px;
+      padding: 10px;
+      p {
+        font-size: 14px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .check-items {
+      .item {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+    }
+    .attached-items {
+      padding: 0 0 0 16px;
+    }
+  }
+}

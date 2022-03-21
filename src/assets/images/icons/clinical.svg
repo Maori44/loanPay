@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.188" height="27.119" viewBox="0 0 20.188 27.119">
+  <g id="clinical_trial" data-name="clinical trial" transform="translate(-144.84 -216.609)">
+    <path id="Path_971" data-name="Path 971" d="M144.845,243.728q0-11.013,0-22.026a.645.645,0,0,1,.208-.506c1.478-1.467,2.947-2.943,4.426-4.41a.609.609,0,0,1,.381-.169q7.466-.013,14.934-.007h.239v27.118Zm1.608-20.345v18.743h16.97V218.217H151.778v5.165Zm.329-1.6h3.4v-3.4Z" fill="#fff"/>
+    <path id="Path_972" data-name="Path 972" d="M267.558,369.6v1.557H259.25V369.6Z" transform="translate(-106.822 -142.844)" fill="#fff"/>
+    <path id="Path_973" data-name="Path 973" d="M259.12,422.276V420.72h8.307v1.556Z" transform="translate(-106.7 -190.574)" fill="#fff"/>
+    <path id="Path_974" data-name="Path 974" d="M259.12,473.386V471.83h8.307v1.556Z" transform="translate(-106.7 -238.294)" fill="#fff"/>
+    <path id="Path_975" data-name="Path 975" d="M267.568,522.94V524.5H259.26V522.94Z" transform="translate(-106.831 -286.014)" fill="#fff"/>
+    <path id="Path_976" data-name="Path 976" d="M308.6,266.883v1.257h-1.583V266.9H305.76v-1.592H307V264.05h1.592v1.241h1.257v1.592Z" transform="translate(-150.247 -44.295)" fill="#fff"/>
+    <path id="Path_977" data-name="Path 977" d="M212.428,369.69v1.545H210.65V369.69Z" transform="translate(-61.445 -142.928)" fill="#fff"/>
+    <path id="Path_978" data-name="Path 978" d="M212.439,420.68v1.561H210.67V420.68Z" transform="translate(-61.464 -190.536)" fill="#fff"/>
+    <path id="Path_979" data-name="Path 979" d="M212.417,471.9v1.546H210.64V471.9Z" transform="translate(-61.436 -238.359)" fill="#fff"/>
+    <path id="Path_980" data-name="Path 980" d="M212.417,523v1.547H210.64V523Z" transform="translate(-61.436 -286.07)" fill="#fff"/>
+  </g>
+</svg>

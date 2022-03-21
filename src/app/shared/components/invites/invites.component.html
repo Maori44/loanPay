@@ -1,0 +1,260 @@
+<form [formGroup]="inviteForm" (ngSubmit)="submit()">
+    <!-- <form [formGroup]="inviteForm"> -->
+    <div class="form-group">
+        <div class="page-inner layout-md">
+            <section class="section-row">
+                <div class="card-wrapper">
+                    <div class="head-blc">
+                        <h2>{{title}}</h2>
+                    </div>
+                    <div class="inner-body padd2">
+                        <div class="tab-wrapper">
+                            <tabset class="tab-nav-start tab-content-padd-type2">
+
+                                <tab>
+                                    <ng-template tabHeading>
+                                        <span class="d-inline-flex flex-column text-center">
+                                            <label>
+                                                Send Invite
+                                            </label>
+                                        </span>
+                                    </ng-template>
+                                    <div class="tab-inner">
+                                        <div class="invite-wrapper2">
+                                            <div class="row-block d-flex">
+                                                <div class="left-col">
+                                                    <div class="profile-block" *ngIf="studyId">
+                                                        <div class="head">
+                                                            <div class="pic-block">
+                                                                <!-- <div
+                                                            class="pic rounded-circle d-inline-flex align-items-center justify-content-center">
+                                                            <span>
+                                                                sp
+                                                            </span>
+                                                        </div> -->
+                                                                <!-- <div class="txt">
+                                                            <h3 class="d-flex align-items-center"> -->
+                                                                <!-- Robert Wilson -->
+                                                                <!-- <h5>Study Title</h5><br> -->
+                                                                <!-- <p>
+                                                                {{studyDetails.csTitle}}</p> -->
+                                                                <!-- <span>{New York}</span> -->
+                                                                <!-- <span>{{studyDetails.csShortDescription}}</span> -->
+                                                                <!-- </h3>
+                                                            <h4 class="text-primary">
+                                                               
+                                                            </h4>
+                                                        </div> -->                                                     
+                                                        <div>                                                           
+                                                        </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="inner">
+                                                            <div class="desc-rw title">
+                                                                <h5>CSCODE</h5>
+                                                                <p>
+                                                                    {{studyDetails?.csCode}}
+                                                                </p>
+                                                            </div>
+                                                            <div class="desc-rw title">
+                                                                <h5>STUDY TITLE</h5>
+                                                                <p>
+                                                                    {{studyDetails?.csTitle}}
+                                                                </p>
+                                                            </div>
+                                                            <div class="desc-rw officialTitle">
+                                                                <h5>OFFICIAL TITLE</h5>
+                                                                <p>
+                                                                    {{studyDetails?.csOfficialTitle}}
+                                                                </p>
+                                                            </div>
+
+                                                            <div class="desc-rw shortdescription">
+                                                                <h5>SHORT DESCRIPTION</h5>
+                                                                <p>
+                                                                    {{studyDetails?.csShortDescription}}
+                                                                </p>
+                                                            </div>     
+
+                                                            <div class="desc-rw location">
+                                                                <h5>LOCATION</h5>
+                                                                <p>
+                                                                    {{studyDetails?.csLocationAddress1}} ,
+                                                                    {{studyDetails?.csLocationAddress2}} ,
+                                                                    {{studyDetails?.csLocationName}}
+                                                                    <!-- Cecilia Chapman 711-2880 Nulla St. Iris Watson P.O.
+                                                                    Box 283
+                                                                    <!-- United States, New York - 10001 -->
+                                                                 </p>
+                                                            </div> 
+                                                                                                                                                                         
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="right-col flex-fill">
+                                                    <div class="card-wrapper card-wrapper2">
+                                                        <div class="inner-body padd2">
+                                                            <div class="invite-form">
+                                                                <h2>SEND INVITE</h2>
+                                                                <div class="inner">
+                                                                    <div class="form-group">
+                                                                        <label for="croInviteList">
+                                                                            Select CRO<span class="text-danger">*</span>
+                                                                        </label>
+
+                                                                        <ng-select formControlName="croInviteEmail"
+                                                                            [items]="croInformationList"
+                                                                            bindLabel="croEmail"
+                                                                            placeholder="Select CRO" appendTo="body"
+                                                                            [multiple]="true" bindValue="userID"
+                                                                            [searchable]="true" 
+                                                                            [selectableGroup]="true"
+                                                                            name="croInviteEmail"
+                                                                            [(ngModel)]="selectedCROEmails" required>
+                                                                        </ng-select>
+                                                                        <div class="invalid-feedback">
+                                                                            Email is required
+                                                                        </div>                                                                  
+                                                                         <!-- <div *ngIf="submitted && inviteForm.controls.croInviteEmail.errors"
+                                                                class="text-danger">
+                                                                <div class="text-danger"
+                                                                    *ngIf="croInviteEmail && inviteForm.controls.croInviteEmail.errors?.required">
+                                                                    Please select email address.
+                                                                </div>
+                                                            </div>    -->
+
+                                                                        <!-- <div class="invalid-feedback">This Field is Required.
+                                                                    
+                                                                </div> -->
+                                                                    </div>
+
+
+                                                                    <!-- <div class="form-group">
+                                                                <label for="clinicalTrialcode">
+                                                                    Clinical Trial code
+                                                                </label>
+                                                                <input type="number" name="clinicalTrialcode"
+                                                                    id="clinicalTrialcode" class="form-control">
+                                                                <div class="invalid-feedback">This Feild is Required.
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group">
+                                                                <label for="cc">
+                                                                    CC
+                                                                </label>
+                                                                <input type="number" name="cc" id="cc"
+                                                                    class="form-control">
+                                                                <div class="invalid-feedback">This Feild is Required.
+                                                                </div>
+                                                            </div> -->
+
+                                                          
+                                                                <div class="form-group mb-2">
+                                                                    <label>
+                                                                        Attachment<span class="text-danger">*</span>
+                                                                    </label>
+                                                                    <div class="upload-file-blc d-flex">
+                                                                        <div class="left-col flex-fill">
+                                                                            <div class="browse-file-blc d-flex position-relative">
+                                                                                <input class="form-control position-absolute"
+                                                                                    formControlName="browseFile" type="file"
+                                                                                    id="attachment" multiple
+                                                                                    [attr.disabled]="!IsViewOnly ? '' : null"
+                                                                                    (change)="onFileSelect($event)">
+                                                                                <button (click)="isFileSelected=!isFileSelected"
+                                                                                    class="btn btn-link position-relative text-decoration-none">
+                                                                                    Choose File
+                                                                                </button>
+                                                                                <div *ngIf="!isFileSelected"
+                                                                                    class="input-cell d-flex align-items-center flex-fill">
+                                                                                    <span *ngIf="!isFileSelected">No file
+                                                                                        chosen</span>
+                                                                                </div>
+                                                                                <div *ngIf="isFileSelected"
+                                                                                class="input-cell d-flex align-items-center flex-fill">
+                                                                                <span *ngIf="isFileSelected"></span>
+                                                                            </div>
+                                                                            </div>
+                                                                            <div class="msg">
+                                                                                Accepted File Type: JPG, PNG, doc and Docx only
+                                                                            </div>
+                                                                            <div *ngIf="submitted && inviteForm.controls.browseFile.errors"
+                                                                                class="text-danger">
+                                                                                <div class="text-danger"
+                                                                                    *ngIf="inviteForm.controls.browseFile.errors?.required">
+                                                                                    File is required.
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div *ngIf="actualSelectedFiles.length>0">
+                                                                                <h6>
+                                                                                    Attached Document
+                                                                                </h6>
+                                                                                <div class="card">
+                                                                                  
+                                                                                    <div *ngFor="let file of actualSelectedFiles">
+                                                                                        {{ file?.name }} <span class="icon-trash" id="{{file.name}}" (click)="deleteOperation(file.name)"></span> 
+                                                                                    </div> 
+                                                                                  </div>
+                                                                               
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <!-- <div class="invalid-feedback">
+                                                                        Field Error Message.
+                                                                    </div> -->
+                                                                </div>                                                           
+                                                                    
+                                                                    <div class="form-group">
+                                                                        <label for="notes">
+                                                                            Notes
+                                                                        </label>
+                                                                        <textarea id="notes" type="text" name="notes"
+                                                                            class="form-control"
+                                                                            formControlName="notes"></textarea>
+                                                                        <div class="invalid-feedback"
+                                                                            *ngIf="submitted && inviteForm.controls.notes.errors"
+                                                                            class="text-danger">
+                                                                            <div class="text-danger"
+                                                                                *ngIf="inviteForm.controls.notes.errors?.required">
+                                                                                Note is required.
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="form-group text-end">
+                                                                        <button
+                                                                            class="btn btn-link send-mail text-decoration-none">
+                                                                            <span class="icon-envelope"
+                                                                                type="submit"></span>
+                                                                            Send Invite
+                                                                        </button>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </tab>
+                                <tab>
+                                    <ng-template tabHeading>
+                                        <span class="d-inline-flex flex-column text-center">
+                                            <label>
+                                                Invite Status
+                                            </label>
+                                        </span>
+                                    </ng-template>
+                                    <div class="tab-inner">
+                                       <invite-status [loginUserId]="loginUserId" [studyId]="studyId" [csStudyCode]="csStudyCode"></invite-status>
+                                    </div>
+                                </tab>
+                            </tabset>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</form>

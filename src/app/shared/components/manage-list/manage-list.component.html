@@ -1,0 +1,81 @@
+<div class="page-inner">
+  <section class="section-row">
+    <div class="card-wrapper flat">
+      <div class="head-blc">
+        <h2>{{listTitle}}</h2>
+      </div>
+      <div class="inner-body padd layout-md">
+        <div class="list-filter inputs-thin inputs-primary">
+          <!-- <div class="list-srch d-inline-flex align-items-center">
+            <h3>Search</h3>
+            <input type="text" class="form-control" (change)="onSearchOrg($event)" name="search"
+              placeholder="Enter Organization Name or Email Address">
+          </div> -->
+        </div>
+        <div class="list-btns text-end">
+          <button class="btn btn-primary" (click)="addOrganizationButton()" *ngIf="isAdd">
+            Add Roles
+          </button>
+        </div>
+        <div class="table-responsive">
+          <table class="table" *ngIf="manageOrgList?.length > 0">
+            <thead>
+              <tr>
+                <th [appSort]="manageOrgList" data-order="desc" data-name="roleName" scope="col">Role Name<i class="fa fa-fw fa-sort"></i></th>
+                <th [appSort]="manageOrgList" data-order="desc" data-name="roleDescription" scope="col">Role Description<i class="fa fa-fw fa-sort"></i></th>
+                <!-- <th scope="col">Phone</th>
+                <th scope="col">Email</th> -->
+                <!-- <th scope="col">Status</th> -->
+                <th scope="col">Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let item of manageOrgList | paginate: { itemsPerPage: 10, currentPage: p }">
+                <td>
+                  {{item?.roleName}}
+                </td>
+                <td>{{item?.roleDescription}}</td>
+                <!-- <td> {{ (item?.primaryContactNumber.length>6)? (item?.primaryContactNumber |
+                  slice:0:6)+'..':(item?.primaryContactNumber) }}</td>
+                <td>{{item?.emailAddress}}</td> -->
+                <!-- <td>
+                  <button (click)="inactiveOrganization(item)"
+                    class="btn btn-link toggle-cell shadow-none icon active position-relative overflow-hidden d-inline-flex">
+                    <span class="toggle-cell-inner w-100 h-100 position-absolute d-inline-flex"
+                      [ngClass]="{'flip': status}">
+                      <span class="toggle-cell-rw d-flex h-100">
+                        <span class="text">
+                          {{item?.isActive == true ? 'Active' : 'Inactive'}}
+                        </span>
+                        <span
+                          [ngClass]="{'icn icon-check bg-primary2':item?.isActive  == true, 'icn icon-cross-round bg-secondary': item?.isActive  == false}"></span>
+                      </span>
+                    </span>
+                  </button>
+                </td> -->
+                <td>
+                  <div class="action-cell">
+                    <a type="button" class="edit"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Edit Roles"
+                    (click)="edit(item)" *ngIf="isEdit">
+                      <span class="icon-edit"></span>
+                    </a>                  
+                    <a class="delete text-danger" (click)="delete(item)"
+                    data-bs-toggle="tooltip" data-bs-placement="bottom" title="Delete Roles"
+                    *ngIf="isDelete">
+                      <span class="icon-trash2"></span>
+                    </a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+            <!-- <div class="clearfix">
+              <pagination-controls (pageChange)="p = $event"></pagination-controls>
+            </div> -->
+          </table>
+          <table class="table text-center" *ngIf="manageOrgList?.length == 0 ">No such Roles exists.</table>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

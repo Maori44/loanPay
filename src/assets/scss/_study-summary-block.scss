@@ -1,0 +1,42 @@
+@import "../scss/theme/variables";
+
+.study-summary-wrapper {
+  @media (max-width: 767px) {
+    flex-direction: column;
+  }
+  > .left-col {
+    margin-right: 54px;
+    @media (max-width: 767px) {
+      margin-right: 0;
+    }
+    .head {
+      margin-bottom: 20px;
+      h3 {
+        font-size: 22px;
+        font-weight: bold;
+        color: #000;
+      }
+      h4 {
+        font-size: 20px;
+        color: #7f8081;
+      }
+    }
+    p {
+      color: #7f8081;
+    }
+  }
+  > .right-col {
+    min-width: 235px;
+    background-color: rgba(239, 239, 239, 0.51);
+    padding: 22px;
+    border-radius: 5px;
+    .btn {
+      margin-bottom: 11px;
+      padding: 7px 10px;
+      span {
+        margin-right: 20px;
+        font-size: 24px;
+      }
+    }
+  }
+}

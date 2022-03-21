@@ -1,0 +1,43 @@
+@import "./theme/variables";
+.sidebar {
+  .sidebar-menu {
+    .menu-list {
+      .card {
+        border-color: transparent;
+        .card-header {
+          padding: 0;
+          background-color: transparent;
+          border-color: transparent;
+          &:first-child {
+            border-radius: 3px;
+          }
+        }
+        .card-body {
+          padding: 0 26px;
+          .menu-items-inner {
+            a {
+              padding: 5px 10px !important;
+              &:hover,
+              &:focus {
+                background-color: transparent !important;
+                color: $primary !important;
+              }
+            }
+            a.active {
+              color: $primary !important;
+            }
+          }
+        }
+      }
+      .panel-open {
+        .card-header {
+          background-color: $primary;
+          border-color: $primary;
+          a {
+            color: #fff !important;
+          }
+        }
+      }
+    }
+  }
+}

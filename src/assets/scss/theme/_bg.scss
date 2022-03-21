@@ -1,0 +1,110 @@
+@import "./_variables";
+
+.bg-primary {
+  color: #fff;
+  background-color: $primary !important;
+  border-color: $primary !important;
+}
+
+.bg-primary2 {
+  color: #fff;
+  background-color: $primary2 !important;
+  border-color: $primary2 !important;
+}
+
+.bg-secondary {
+  color: #fff;
+  background-color: $secondary !important;
+  border-color: $secondary !important;
+}
+.bg-secondary-dark {
+  color: #fff;
+  background-color: $secondary-dark !important;
+  border-color: $secondary-dark !important;
+}
+
+.bg-success {
+  color: #fff;
+  background-color: $success !important;
+  border-color: $success !important;
+}
+.bg-success-dark {
+  color: #fff;
+  background-color: $success-dark !important;
+  border-color: $success-dark !important;
+}
+.bg-danger {
+  color: #fff;
+  background-color: $danger !important;
+  border-color: $danger !important;
+}
+.bg-danger-dark {
+  color: #fff;
+  background-color: $danger-dark !important;
+  border-color: $danger-dark !important;
+}
+
+.bg-warning {
+  background-color: $warning !important;
+  border-color: $warning !important;
+}
+.bg-warning2 {
+  background-color: $warning-dark !important;
+  border-color: $warning-dark !important;
+}
+// Gradient
+.primary-gradient,
+.primary-gradient:hover {
+  background: transparent
+    linear-gradient(
+      89deg,
+      rgba(83, 157, 254, 0.3) 0%,
+      rgba(83, 157, 254, 0.3) 100%
+    )
+    0% 0% no-repeat padding-box;
+  color: #106698;
+}
+.success-gradient,
+.success-gradient:hover {
+  background: transparent
+    linear-gradient(
+      89deg,
+      rgba(37, 248, 121, 0.3) 0%,
+      rgba(26, 168, 45, 0.3) 100%
+    )
+    0% 0% no-repeat padding-box;
+  color: #0f7e3b;
+}
+.warning-gradient,
+.warning-gradient:hover {
+  background: transparent
+    linear-gradient(
+      89deg,
+      rgba(255, 212, 113, 0.3) 0%,
+      rgba(255, 170, 0, 0.3) 100%
+    )
+    0% 0% no-repeat padding-box;
+  color: #7b4c0e;
+}
+.danger-gradient,
+.danger-gradient:hover {
+  background: transparent
+    linear-gradient(
+      89deg,
+      rgba(242, 145, 109, 0.3) 0%,
+      rgba(255, 82, 82, 0.3) 100%
+    )
+    0% 0% no-repeat padding-box;
+  color: #911010;
+}
+.info-gradient,
+.info-gradient:hover {
+  background: transparent
+    linear-gradient(
+      89deg,
+      rgba(204, 119, 233, 0.3) 0%,
+      rgba(121, 82, 255, 0.3) 100%
+    )
+    0% 0% no-repeat padding-box;
+  color: #13137e;
+}

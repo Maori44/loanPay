@@ -1,0 +1,298 @@
+@import "../scss/theme/variables";
+.message-wrapper {
+  .message-menu {
+    margin-bottom: 20px;
+    @media (max-width: 550px) {
+      margin-bottom: 10px;
+      justify-content: flex-end;
+    }
+
+    .btn {
+      font-size: 15px;
+      font-weight: bold;
+      color: #333;
+      padding: 0;
+      margin: 0 18px 0 0;
+      &:hover {
+        color: $primary2;
+      }
+      @media (max-width: 550px) {
+        margin: 0 15px 0 0;
+        width: 36px;
+        height: 36px;
+        background: #efefef;
+        border-radius: 50%;
+        justify-content: center;
+        &:hover {
+          background: $primary;
+          color: #fff;
+        }
+      }
+      span {
+        margin-right: 5px;
+        @media (max-width: 550px) {
+          margin-right: 0;
+        }
+      }
+      .txt-cell {
+        @media (max-width: 550px) {
+          display: none;
+        }
+      }
+    }
+  }
+  .message-list-blc {
+    border: 1px solid #d4d4d4;
+    .checkbox-cell {
+      .icon {
+        border-color: #d2cbcb;
+      }
+      input:checked + .icon {
+        border-color: $primary;
+      }
+    }
+    .head {
+      height: 61px;
+      border-bottom: 1px solid rgba(212, 212, 212, 1);
+      @media (max-width: 767px) {
+        height: 50px;
+      }
+      @media (max-width: 550px) {
+        flex-direction: column;
+        height: auto;
+      }
+
+      .btn,
+      .search-blc {
+        height: 100%;
+        @media (max-width: 550px) {
+          height: 40px;
+        }
+        input {
+          border: none;
+          height: 100%;
+          padding: 0 28px 0 58px;
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .compose-btn {
+        font-size: 15px;
+        font-weight: bold;
+        color: $base-color;
+        background-color: rgba(233, 233, 233, 0.5);
+        padding: 0 22px;
+        &:hover {
+          background-color: $primary;
+          color: #fff;
+          border-color: transparent;
+        }
+        @media (max-width: 550px) {
+          order: 2;
+          padding: 0 12px;
+          background-color: $primary;
+          color: #fff;
+        }
+
+        span {
+          margin: 0 10px 0 0;
+          position: relative;
+          top: 2px;
+        }
+      }
+      .search-blc {
+        span {
+          left: 28px;
+          color: rgba(0, 0, 0, 0.5);
+        }
+        input {
+          font-size: 16px;
+          padding: 0 28px 0 58px;
+          &::placeholder {
+            color: #d2cbcb;
+          }
+          &:-moz-placeholder {
+            color: #d2cbcb;
+          }
+        }
+        input:focus + span {
+          color: $primary;
+        }
+      }
+    }
+    .filter-blc {
+      padding: 0 16px 0 22px;
+      font-size: 14px;
+      min-height: 52px;
+      background-color: #f8f8f8;
+      @media (max-width: 640px) {
+        flex-direction: column;
+      }
+      .left-col {
+        @media (max-width: 640px) {
+          order: 2;
+          padding: 0 0 15px 0;
+        }
+        .checkbox-cell {
+          margin-right: 58px;
+          @media (max-width: 1150px) {
+            margin-right: 18px;
+          }
+        }
+        .sort-dropdown {
+          @media (max-width: 640px) {
+            margin-left: auto;
+          }
+          .dropdown-toggle {
+            background-color: #fff;
+            border-radius: 3px;
+            border: 1px solid rgba(210, 203, 203, 1);
+            font-size: 14px;
+            padding: 2px 11px;
+            color: #333;
+            &:hover {
+              border: 1px solid $primary;
+            }
+            .icons-cell {
+              font-size: 12px;
+              margin-right: 5px;
+              color: #aaa;
+            }
+            .txt-cell {
+              margin-right: 10px;
+            }
+            .arrow-icon {
+              font-size: 7px;
+              color: #777;
+            }
+          }
+        }
+      }
+      .right-col {
+        @media (max-width: 640px) {
+          margin-left: unset !important;
+          justify-content: flex-end;
+          border-bottom: 1px solid #ddd;
+          margin: 0 -15px 15px -22px !important;
+        }
+        .btn {
+          color: $base-color;
+          &:hover {
+            color: $primary;
+          }
+          span {
+            font-size: 12px;
+            margin-right: 9px;
+          }
+        }
+      }
+    }
+    .message-list {
+      border-bottom: 1px solid #d2cbcb;
+      .list-item {
+        padding: 15px 22px 15px 22px;
+        border-bottom: 1px solid #e9e9e9;
+        cursor: pointer;
+        &:last-child {
+          border-bottom: none;
+        }
+        * {
+          cursor: pointer;
+        }
+        &:hover {
+          background-color: #f8f8f8;
+          box-shadow: 0px 3px 4px #f1f1f1 inset;
+        }
+        @media (max-width: 550px) {
+          flex-direction: column;
+        }
+
+        .left-col {
+          margin-right: 20px;
+          @media (max-width: 550px) {
+            margin-right: 0;
+          }
+          .checkbox-cell {
+            margin: 3px 8px 0 0;
+          }
+          .btn.cell {
+            padding: 0 8px;
+            color: $base-color;
+          }
+          .btn.icons-cell {
+            font-size: 17px;
+          }
+          .btn.favourite {
+            &:hover {
+              color: $warning-dark;
+            }
+          }
+          .btn.favourite.on {
+            color: $warning-dark;
+          }
+          .btn.lock {
+            &:hover {
+              color: $danger-dark;
+            }
+          }
+          .checkbox-cell {
+            span {
+              margin: 0;
+            }
+          }
+          .txt-cell {
+            font-size: 16px;
+            font-weight: bold;
+            line-height: normal;
+            margin-left: 5px;
+            span {
+              font-size: 14px;
+              font-weight: normal;
+              margin-top: 5px;
+            }
+          }
+        }
+        .right-col {
+          @media (max-width: 550px) {
+            margin-left: 100px !important;
+          }
+          .time {
+            font-size: 14px;
+            font-weight: bold;
+            @media (max-width: 550px) {
+              font-weight: normal;
+              color: #939393;
+            }
+          }
+        }
+      }
+      .list-item.active {
+        background-color: #f8f8f8;
+      }
+    }
+    .foot {
+      font-size: 14px;
+      color: #a8b1ba;
+      padding: 10px 22px;
+      .left-col {
+        margin-right: 15px;
+        a {
+          text-decoration: underline;
+        }
+        .btn {
+          padding: 0 5px;
+        }
+      }
+      .right-col {
+        .msg-send {
+          font-size: 18px;
+          color: $base-color;
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}

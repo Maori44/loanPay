@@ -1,0 +1,43 @@
+<div class="login-wrapper d-flex flex-column flex-fill position-relative">
+  <div class="top-pic position-absolute">
+  </div>
+  <div class="container m-auto">
+    <div class="loign-rw d-flex align-items-center">
+      <div class="login-lft text-center">
+        <!-- <h6>Welcome to </h6> -->
+        <img src="../../../../assets/images/logo.jpg" class="w-50 rounded-circle" alt="" srcset="">
+      </div>
+      <div class="login-rt">
+        <div class="login-bx">
+          <div class="signUpClass text-center mb-5">
+            <h3>Loan Offer</h3>
+            <label class="signUpClass" for="sign-up">Thank you for accepting the offer!!</label>
+          </div>
+          <div class="inner-blc">
+            <div class="form-group d-flex justify-content-between">
+              <input  type='file' (change)="importFile($event)" hidden/>
+              <label class="signUpClass" for="selfie">Upload your Selfie</label>
+              <img src="../../../../assets/fonts-icon/plus.png" (click)="upload()" alt="" srcset="">
+            </div>
+            <hr>
+            <div class="form-group d-flex justify-content-between">
+              <label class="signUpClass" for="selfie">Upload Address Proof</label>
+              <img src="../../../../assets/fonts-icon/plus.png" (click)="upload()" alt="" srcset="">
+            </div>
+            <hr>
+            <div class="form-group d-flex justify-content-between">
+              <label class="signUpClass" for="selfie">Upload Pan Card</label>
+              <img src="../../../../assets/fonts-icon/plus.png" (click)="upload()" alt="" srcset="">
+            </div>
+            <hr>
+            <div class="form-group login-link-rw d-flex mt-3">
+              <button type="submit" class="btn btn-primary rounded-pill flex-fill">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="btm-pic position-absolute">
+  </div>
+</div>

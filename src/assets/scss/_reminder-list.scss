@@ -1,0 +1,24 @@
+@import "../scss/theme/variables";
+
+.reminder-list {
+  .row-blc {
+    margin-bottom: 20px;
+    > h3 {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+    .item-list {
+      .item {
+        margin-bottom: 16px;
+        h4,
+        h5 {
+          font-size: 16px;
+        }
+        h4 {
+          color: #9a9a9a;
+          margin-bottom: 3px;
+        }
+      }
+    }
+  }
+}

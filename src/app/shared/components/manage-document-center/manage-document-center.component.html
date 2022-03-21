@@ -1,0 +1,165 @@
+<div class="page-inner with-breadcrumb">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Document Center</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Document Center</li>
+        </ol>
+    </nav>
+    <section class="section-row">
+        <div class="card-wrapper layout-md">
+            <div class="head-blc d-flex align-items-center with-button">
+                <h2>Document Center</h2>
+                <div class="right-col ms-auto">
+                    <button class="btn btn-btn-link back-btn d-inline-flex align-items-center">
+                        <span class="icon-arrow-left"></span>
+                        Back
+                    </button>
+                </div>
+            </div>
+            <div class="inner-body padd2">
+                <div class="list-btns text-end">
+                    <button class="btn btn-primary">
+                        Add Document
+                    </button>
+                </div>
+                <div class="accordion-wrapper">
+                    <accordion [isAnimated]="true" [closeOthers]="oneAtATime">
+                        <accordion-group [isOpen]="initialOpen">
+                            <div class="head-blc d-flex align-items-center" accordion-heading>
+                                <h2>Clinical Study Protocol</h2>
+                                <span class="icons-cell ms-auto d-inline-flex align-items-center">
+                                    <span class="icon-angle-right ms-auto">
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Comment</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Document Version</th>
+                                            <th scope="col">Uploaded By</th>
+                                            <th scope="col">Document Type</th>
+                                            <th scope="col" class="action-col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of tempItem">
+                                            <td>
+                                                Module has been added
+                                            </td>
+                                            <td>14/6/2021</td>
+                                            <td>2.0</td>
+                                            <td>Jasmine More</td>
+                                            <td>Doc</td>
+                                            <td>
+                                                <div class="action-cell">
+                                                    <a href="#" class="download">
+                                                        <span class="icon-download"></span>
+                                                    </a>
+                                                    <a href="#" class="delete text-danger">
+                                                        <span class="icon-trash2"></span>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </accordion-group>
+                        <accordion-group>
+                            <div class="head-blc d-flex align-items-center" accordion-heading>
+                                <h2>Subject Information</h2>
+                                <span class="icons-cell ms-auto d-inline-flex align-items-center">
+                                    <span class="icon-angle-right ms-auto">
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Comment</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Document Version</th>
+                                            <th scope="col">Uploaded By</th>
+                                            <th scope="col">Document Type</th>
+                                            <th scope="col" class="action-col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of tempItem">
+                                            <td>
+                                                Module has been added
+                                            </td>
+                                            <td>14/6/2021</td>
+                                            <td>2.0</td>
+                                            <td>Jasmine More</td>
+                                            <td>Doc</td>
+                                            <td>
+                                                <div class="action-cell">
+                                                    <a href="#" class="download">
+                                                        <span class="icon-download"></span>
+                                                    </a>
+                                                    <a href="#" class="delete text-danger">
+                                                        <span class="icon-trash2"></span>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </accordion-group>
+                        <accordion-group>
+                            <div class="head-blc d-flex align-items-center" accordion-heading>
+                                <h2>Case Report Form (CRF)</h2>
+                                <span class="icons-cell ms-auto d-inline-flex align-items-center">
+                                    <span class="icon-angle-right ms-auto">
+                                    </span>
+                                </span>
+                            </div>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">Comment</th>
+                                            <th scope="col">Date</th>
+                                            <th scope="col">Document Version</th>
+                                            <th scope="col">Uploaded By</th>
+                                            <th scope="col">Document Type</th>
+                                            <th scope="col" class="action-col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let item of tempItem">
+                                            <td>
+                                                Module has been added
+                                            </td>
+                                            <td>14/6/2021</td>
+                                            <td>2.0</td>
+                                            <td>Jasmine More</td>
+                                            <td>Doc</td>
+                                            <td>
+                                                <div class="action-cell">
+                                                    <a href="#" class="download">
+                                                        <span class="icon-download"></span>
+                                                    </a>
+                                                    <a href="#" class="delete text-danger">
+                                                        <span class="icon-trash2"></span>
+                                                    </a>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </accordion-group>
+                    </accordion>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

@@ -1,0 +1,16 @@
+stages:
+  - build
+before_script:
+  - cd
+
+build-dev:
+  stage: build
+  tags:
+    - staging
+  script:
+    - cd "C:\Windows\System32\inetsrv"
+    - 'appcmd start sites "SLFrontEnd"'
+    - 'appcmd stop sites "SLFrontEnd"'
+    - 'xcopy /H /S /y /c /q /k /e /f C:\GitLab-Runner\builds\50e68721\0\SDM\SLFrontEnd\dist\SLFrontEnd C:\inetpub\wwwroot\SLFrontEnd\'
+    - cd "C:\Windows\System32\inetsrv"
+    - 'appcmd start sites "SLFrontEnd"'

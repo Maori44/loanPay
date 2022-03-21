@@ -1,0 +1,58 @@
+@import "../scss/theme/variables";
+
+.radiobox-cell {
+  cursor: pointer;
+  input {
+    opacity: 0;
+  }
+  .icon {
+    width: 26px;
+    height: 26px;
+    margin-right: 12px;
+    border: 1px solid #b1b1b1;
+    flex-shrink: 0;
+    @media (max-width: 767px) {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+    }
+    span {
+      width: 12px;
+      height: 12px;
+      background-color: $primary;
+      visibility: hidden;
+    }
+  }
+  .txt {
+    margin-top: 2px;
+    font-size: 16px;
+    @media (max-width: 767px) {
+      margin-top: 0;
+    }
+  }
+  input:checked + .icon {
+    span {
+      visibility: visible;
+    }
+  }
+}
+.options-row {
+  margin-bottom: 24px;
+  @media (max-width: 500px) {
+    flex-direction: column;
+  }
+  .option-col {
+    margin-right: 36px;
+    @media (max-width: 500px) {
+      margin: 0 0 15px 0;
+    }
+  }
+}
+.options-row.profile {
+  @media (max-width: 767px) {
+    flex-direction: row;
+  }
+  .option-col {
+    margin-right: 15px;
+  }
+}

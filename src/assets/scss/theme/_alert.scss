@@ -1,0 +1,25 @@
+@import './_variables';
+
+.alert {
+  color: $base-color;
+}
+
+.alert-primary {
+  background-color: $primary;
+  border-color    : $primary;
+}
+
+// .alert-secondary {
+//   background-color: $secondary;
+//   border-color    : $secondary;
+// }
+
+.alert-success {
+  background-color: $success;
+  border-color    : $success;
+}
+
+.alert-danger {
+  background-color: $danger;
+  border-color    : $danger;
+}

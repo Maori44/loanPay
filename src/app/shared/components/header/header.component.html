@@ -1,0 +1,82 @@
+<header class="header d-flex position-relative">
+    <div class="logo-head d-flex align-items-center">
+        <span class="logo">SAMPLE LOGO</span>
+        <button class="btn btn-link ms-auto text-decoration-none">
+            <span class="icon-hamburger"></span>
+        </button>
+    </div>
+    <div class="header-rt d-flex flex-fill">
+        <div class="left-col">
+
+            <div class="head-src position-relative" [ngClass]="{'active': inputVisible}">
+                <button
+                    class="btn btn-link text-decoration-none position-absolute shadow-none d-inline-flex align-items-center"
+                    (click)="inputSrchHandler()">
+                    <span class="icon-search"></span>
+                </button>
+                <input type="text" name="search" class="form-control" />
+            </div>
+        </div>
+        <div class="right-col ms-auto d-inline-flex align-items-center">
+            <div class="notification-drop">
+                <div class="btn-group" dropdown placement="bottom right">
+                    <button id="button-basic" dropdownToggle type="button"
+                        class="btn btn-link dropdown-toggle text-decoration-none shadow-none d-inline-flex align-items-center"
+                        aria-controls="notification-dropdown">
+                        <span class="icon-bell position-relative">
+                            <span
+                                class="count position-absolute d-inline-flex align-items-center justify-content-center">1</span>
+                        </span>
+                    </button>
+                    <ul id="notification-dropdown" *dropdownMenu class="dropdown-menu" role="menu">
+                        <li role="menuitem"><a class="dropdown-item" href="#">Item 1</a></li>
+                        <li role="menuitem"><a class="dropdown-item" href="#">Item 2</a></li>
+                        <li role="menuitem"><a class="dropdown-item" href="#">Item 3</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="user-profile-drop">
+                <div class="btn-group" dropdown placement="bottom right">
+                    <button id="button-basic" dropdownToggle type="button"
+                        class="btn btn-link dropdown-toggle text-decoration-none shadow-none d-inline-flex align-items-center p-0"
+                        aria-controls="user-profile-dropdown">
+                        <span class="pic-cell rounded-circle d-inline-flex">
+                            <img class="img-fluid rounded-circle" alt="User"
+                                src="'../../../../../../assets/images/recent-list-item-pic.png" /> 
+<!-- 
+                                <ngx-avatar size="35" value="28%"
+                                [round]="true" class="clickable"
+                                src="{{logo}}">
+                            </ngx-avatar> -->
+                        </span>
+                        <span class="text d-inline-flex align-items-center">
+                           {{loggedInUserName}}
+                            <span class="icon-angle-down"></span>
+                        </span>
+                    </button>
+                    <ul id="user-profile-dropdown" *dropdownMenu class="dropdown-menu" role="menu">
+                        <li role="menuitem">
+                            <a class="dropdown-item">
+                                <span class="icon-settting"></span>
+                                Setting
+                            </a>
+                        </li>
+
+                        <li role="menuitem">
+                            <a class="dropdown-item" (click)="editProfile(checkStaffRole)">
+                                <span class="icon-user"></span>
+                                Edit Profile
+                            </a>
+                        </li>                       
+                        <li role="menuitem">
+                            <a (click)="logout()" class="dropdown-item">
+                                <span class="icon-logout"></span>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>

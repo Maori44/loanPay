@@ -1,0 +1,125 @@
+@import "../scss/theme/variables";
+.comment-wrapper {
+  .comment-btn-rw {
+    margin-bottom: 22px;
+  }
+  .comment-list {
+    margin-bottom: 54px;
+    .comment-blc {
+      border: 1px solid #c8c8c8;
+      border-radius: 4px;
+      padding: 25px;
+      margin-bottom: 22px;
+      &:hover {
+        background-color: #f9fcfd;
+      }
+
+      .left-col {
+        margin-right: 20px;
+        .user-pic {
+          width: 102px;
+          height: 102px;
+          img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      .right-col {
+        h2 {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 13px;
+        }
+        p {
+          margin-bottom: 11px;
+        }
+        .head {
+          .time-cell {
+            span {
+              color: rgba(51, 51, 51, 0.44);
+              margin-left: 33px;
+            }
+          }
+        }
+        .button-rw {
+          .btn {
+            padding: 2px 15px;
+            font-size: 16px;
+            min-width: 81px;
+            span {
+              font-size: 12px;
+              margin-right: 5px;
+            }
+          }
+        }
+        .button-rw.multiple {
+          @media (max-width: 350px) {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+          }
+          .btn {
+            margin-left: 8px;
+            @media (max-width: 350px) {
+              margin: 0 6px 6px;
+            }
+          }
+        }
+      }
+    }
+    .comment-blc.full-screen-responive {
+      @media (max-width: 767px) {
+        flex-direction: column;
+        align-items: center;
+      }
+      .left-col {
+        @media (max-width: 767px) {
+          margin-right: 0;
+        }
+      }
+      .right-col {
+        @media (max-width: 767px) {
+          margin-left: unset !important;
+        }
+        @media (max-width: 374px) {
+          flex-direction: column;
+          align-items: center;
+        }
+        .head {
+          @media (max-width: 767px) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 15px;
+          }
+          .time-cell {
+            span {
+              margin: 0 15px;
+            }
+          }
+        }
+        .button-rw {
+          @media (max-width: 767px) {
+            text-align: center !important;
+          }
+        }
+      }
+    }
+  }
+  .comment-msg {
+    .form-group {
+      margin-bottom: 30px;
+      textarea.form-control {
+        height: 128px;
+      }
+    }
+    .button-rw {
+      @media (max-width: 480px) {
+        text-align: center !important;
+      }
+      .btn {
+        min-width: 171px;
+      }
+    }
+  }
+}

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+  <g id="inventory" transform="translate(-704 -284)">
+    <path id="Path_935" data-name="Path 935" d="M704,295.3V284h11.3v11.3Zm7.75-9.883v3.495h-4.219v-3.489h-2.11v8.455h8.452v-8.46Zm-1.411.005h-1.376V287.5h1.376Z" fill="#565292"/>
+    <path id="Path_936" data-name="Path 936" d="M975,284h11.3v11.3H975Zm9.873,9.882V285.42h-2.122v3.489h-4.219v-3.49H976.42v8.463Zm-4.908-8.467V287.5h1.367v-2.087Z" transform="translate(-258.297)" fill="#565292"/>
+    <path id="Path_937" data-name="Path 937" d="M715.3,566.3H704V555h11.3Zm-9.874-9.878v8.453h8.456v-8.45h-2.125v3.484h-4.217V556.42Zm4.921.006H708.96V558.5h1.384Z" transform="translate(0 -258.297)" fill="#565292"/>
+    <path id="Path_938" data-name="Path 938" d="M986.3,555v11.3H975V555Zm-9.874,1.419v8.453h8.455v-8.449h-2.125v3.483h-4.218v-3.487Zm4.909,2.089V556.42h-1.366v2.087Z" transform="translate(-258.297 -258.297)" fill="#565292"/>
+  </g>
+</svg>

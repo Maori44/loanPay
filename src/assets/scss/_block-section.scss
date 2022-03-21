@@ -1,0 +1,32 @@
+@import "./theme/variables";
+
+.block-section {
+  .block-ttl {
+    margin-bottom: 6px;
+    h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 0;
+    }
+    h4 {
+      font-size: 20px;
+      color: #7f8081;
+    }
+  }
+  .inner {
+    p {
+      color: #7f8081;
+    }
+  }
+}
+.btns-row {
+  a {
+    margin-left: 10px;
+  }
+  .edit-btn {
+    span {
+      margin-right: 4px;
+      font-size: 14px;
+    }
+  }
+}

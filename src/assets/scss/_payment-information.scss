@@ -1,0 +1,119 @@
+@import "../scss/theme/variables";
+
+.tab-wrapper.payment-info {
+  .tab-container {
+    display: flex;
+    @media (max-width: 640px) {
+      flex-direction: column;
+    }
+    > .nav {
+      flex-direction: column;
+      justify-content: flex-start;
+      min-width: 250px;
+      margin-top: 24px;
+      border-color: transparent;
+      @media (max-width: 1150px) {
+        min-width: 210px;
+      }
+      @media (max-width: 640px) {
+        flex-direction: row;
+        justify-content: center;
+        min-width: unset;
+        border-color: #e5e5e5;
+      }
+      .nav-item {
+        margin-bottom: 38px;
+        @media (max-width: 640px) {
+          margin-bottom: 0;
+        }
+        .nav-link {
+          font-size: 16px;
+          color: #c5c5c5;
+          padding: 0;
+          flex: 1;
+          border-color: transparent;
+          @media (max-width: 640px) {
+            &:hover {
+              border-bottom: 3px solid rgba($primary2, 0.5);
+            }
+          }
+          .icons-blc {
+            width: 115px;
+            @media (max-width: 1150px) {
+              width: 110px;
+              margin: 0 15px;
+            }
+            @media (max-width: 640px) {
+              width: unset;
+            }
+            .icon-elem {
+              font-size: 100px;
+              margin-bottom: 7px;
+              @media (max-width: 1150px) {
+                font-size: 80px;
+              }
+              @media (max-width: 640px) {
+                width: auto;
+                font-size: 40px;
+              }
+            }
+            .txt-cell {
+              font-weight: bold;
+            }
+          }
+          .input-cell {
+            @media (max-width: 640px) {
+              display: none !important;
+            }
+            .icon {
+              margin-right: 0;
+              margin-left: 20px;
+            }
+          }
+          .input-cell.icon1 {
+            margin-top: 55px;
+            @media (max-width: 1150px) {
+              margin-top: 44px;
+            }
+            @media (max-width: 640px) {
+              margin-top: 40px;
+            }
+          }
+          .input-cell.icon2 {
+            margin-top: 50px;
+            @media (max-width: 1150px) {
+              margin-top: 36px;
+            }
+            @media (max-width: 640px) {
+              margin-top: 44px;
+            }
+          }
+        }
+      }
+      .nav-item.active {
+        .nav-link {
+          @media (max-width: 640px) {
+            border-color: $primary;
+          }
+          .icons-blc {
+            @media (max-width: 640px) {
+              color: $primary;
+            }
+            .icon-elem {
+              color: $primary;
+            }
+            .txt-cell {
+              color: $base-color;
+            }
+          }
+        }
+        .radiobox-cell .icon span {
+          visibility: visible;
+        }
+      }
+    }
+    > .tab-content {
+      flex: 1;
+    }
+  }
+}

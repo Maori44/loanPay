@@ -1,0 +1,9 @@
+.align-right{
+   margin-right:20px;
+}
+
+.cur-point { cursor: pointer; }
+
+.card-wrapper .list-filter .list-srch {
+   max-width: 500px !important;
+}

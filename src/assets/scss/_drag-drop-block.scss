@@ -1,0 +1,25 @@
+@import "../scss/theme/variables";
+
+.drag-drop-wrapper {
+  height: 124px;
+  border: 2px dashed #b2abab;
+  cursor: pointer;
+  &:hover {
+    background-color: #fafafa;
+  }
+  .text-cell {
+    font-size: 16px;
+    .browse-btn {
+      padding: 0 5px;
+      font-weight: bold;
+      input {
+        opacity: 0;
+        width: 100%;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+}

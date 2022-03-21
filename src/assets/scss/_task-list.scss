@@ -1,0 +1,11 @@
+@import "../scss/theme/variables";
+
+.task-list {
+  .item {
+    margin: 0 -16px;
+    padding: 7px 16px;
+    &:hover {
+      background-color: #fafafa;
+    }
+  }
+}

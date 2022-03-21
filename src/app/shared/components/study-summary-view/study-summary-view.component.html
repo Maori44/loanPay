@@ -1,0 +1,230 @@
+<div class="page-inner">
+    <section class="section-row">
+        <div class="card-wrapper flat">
+            <div class="head-blc d-flex align-items-center with-button">
+                <h2>Study Summary</h2>
+                <div
+                    class="float-right right-col ms-auto list-filter inputs-thin inputs-primary list-srch d-inline-flex align-items-center">
+                    <button routerLink="/sponsor/manage-clinical-trials"
+                        class="btn btn-btn-link back-btn d-inline-flex align-items-center">
+                        <span class="icon-arrow-left"></span>
+                        Back
+                    </button>
+                </div>
+            </div>
+            <div class="inner-body padd">
+                <div class="study-summary-wrapper">
+                    <div class="left-col flex-fill">
+                        <div class="head">
+                            <h3>
+                                {{csDetailsModelsData?.csTitle}}
+                            </h3>
+                            <h4>
+                                {{csDetailsModelsData?.csOfficialTitle}}
+                            </h4>
+                        </div>
+                        <div class="inner-body">
+                            <div class="tab-wrapper">
+                                <tabset>
+                                    <tab *ngIf="csDetailsModelsData">
+                                        <ng-template tabHeading>
+                                            <span class="d-inline-flex flex-column text-center">
+                                                <span class="icon-user icons-cell">
+                                                </span>
+                                                <label>
+                                                    Study Description
+                                                </label>
+                                            </span>
+                                        </ng-template>
+                                        <div class="tab-inner">
+                                            <div class="section-ttl">
+                                                <h2>Study Description</h2>
+                                            </div>
+                                            <p>
+                                                Brief Summary:
+                                                {{csDetailsModelsData?.csDescription}}
+                                            </p>
+                                            <h6>Condition or disease :
+                                                {{csConditionOrDiseaseModelData[0]?.csConditionOrDiseaseText}}</h6>
+                                            <h6>Intervention/treatment :</h6>
+                                            <div
+                                                *ngFor="let csInterventionOrTreatment of csInterventionOrTreatmentModelData">
+                                                <ul>
+                                                    <li>
+                                                        <p>
+                                                            {{csInterventionOrTreatment?.csInterventionOrTreatmentText}}
+                                                        </p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <h6>Phase :</h6>
+                                            <div *ngFor="let csPhase of csPhaseModelData">
+                                                <ul>
+                                                    <li>
+                                                        <p>Phase {{csPhase?.csPhaseText}}</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                                    </tab>
+                                    <tab *ngIf="csArmsInterventionsModelData?.length > 0">
+                                        <ng-template tabHeading>
+                                            <span class="d-inline-flex flex-column text-center">
+                                                <span class="icon-user icons-cell">
+                                                </span>
+                                                <label>
+                                                    Study Design
+                                                </label>
+                                            </span>
+                                        </ng-template>
+                                        <div class="row">
+                                            <div class="section-ttl mt-2">
+                                                <h2>Study Design</h2>
+                                            </div>
+                                            <h6>Study Type : {{csDetailsModelsData.csStudyType == 1 ? 'Interventional
+                                                (Clinical Trial)' : 'Observational (Clinical Trial)' }} </h6>
+                                            <h6>Estimated Enrollment : {{csDetailsModelsData.csActualEnrollment}}</h6>
+                                            <h6>Allocation: {{csDetailsModelsData.csAllocation}}</h6>
+                                            <h6>Intervention Model: {{csDetailsModelsData.csInterventionMode}}</h6>
+                                            <h6>Masking: {{csDetailsModelsData.csMasking}}</h6>
+                                            <h6>Primary Purpose: {{csDetailsModelsData.csPrimaryPurpose}}</h6>
+                                            <h6>Official Title: {{csDetailsModelsData.csOfficialTitle}}</h6>
+                                            <h6>Study Start Date : {{csDetailsModelsData.csActualStartDate | date :
+                                                'mediumDate'}}</h6>
+                                            <h6>Estimated Primary Completion Date :
+                                                {{csDetailsModelsData.csEstPrimaryCompletionDate | date : 'mediumDate'}}
+                                            </h6>
+                                            <h6>Estimated Study Completion Date :
+                                                {{csDetailsModelsData.csEstStudyCompletionDate | date : 'mediumDate'}}
+                                            </h6>
+                                        </div>
+                                        <div class="row">
+                                            <div class="section-ttl mt-2">
+                                                <h2>Arms and Intervention</h2>
+                                            </div>
+                                            <div *ngFor="let armsAndIntervation of csArmsInterventionsModelData">
+                                                <ul>
+                                                    <li>
+                                                        <p>{{armsAndIntervation.csArmsOrIntervention == 1 ? 'Arms' :
+                                                            'Intervention'}} :
+                                                            {{armsAndIntervation.csArmsInterventionsText}}</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </tab>
+                                    <tab *ngIf="csCriteriaModelData?.length > 0">
+                                        <ng-template tabHeading>
+                                            <span class="d-inline-flex flex-column text-center">
+                                                <span class="icon-user icons-cell">
+                                                </span>
+                                                <label>
+                                                    Eligibility Criteria
+                                                </label>
+                                            </span>
+                                        </ng-template>
+                                        <div class="row">
+                                            <div class="section-ttl mt-2">
+                                                <h2>Eligibility Criteria</h2>
+                                            </div>
+                                            <div *ngFor="let criteria of csCriteriaModelData">
+                                                <p>{{criteria.csInclusionExclusion == 1 ? 'Inclusion Criteria :' :
+                                                    'Exclusion Criteria :'}}</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>{{criteria.csCriteriaText}}</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </tab>
+                                    <tab *ngIf="csOutcomeMeasuresData?.length > 0">
+                                        <ng-template tabHeading>
+                                            <span class="d-inline-flex flex-column text-center">
+                                                <span class="icon-user icons-cell">
+                                                </span>
+                                                <label>
+                                                    Outcome Measures
+                                                </label>
+                                            </span>
+                                        </ng-template>
+                                        <div class="row">
+                                            <div class="section-ttl mt-2">
+                                                <h2>Outcome Measures</h2>
+                                            </div>
+                                            <div *ngFor="let outcome of csOutcomeMeasuresData">
+                                                <p>{{outcome.csPrimarySecondary == 1 ? 'Primary Outcome Measures :' :
+                                                    'Secondary Outcome Measures :'}}</p>
+                                                <ul>
+                                                    <li>
+                                                        <p>{{outcome.csOutcomeMeasuresText}}</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </tab>
+                                    <tab *ngIf="csContactModelData?.length > 0">
+                                        <ng-template tabHeading>
+                                            <span class="d-inline-flex flex-column text-center">
+                                                <span class="icon-user icons-cell">
+                                                </span>
+                                                <label>
+                                                    More Information
+                                                </label>
+                                            </span>
+                                        </ng-template>
+                                        <div class="row">
+                                            <div class="section-ttl mt-2">
+                                                <h2>More Information</h2>
+                                            </div>
+                                            <p>Sex Eligible for study : {{genderName}}</p>
+                                            <p>Studies a US FDA regulated device product :
+                                                {{csDetailsModelsData?.csfdaDeviceProduct == 1 ? 'Yes' : 'No'}}</p>
+                                            <p>Studies a US FDA regulated drug product :
+                                                {{csDetailsModelsData?.csfdaDrugProduct == 1 ? 'Yes' : 'No'}}</p>
+                                            <p>Product manufactured in or exported from the US :
+                                                {{csDetailsModelsData?.csProductUSA == 1 ? 'Yes' : 'No'}}</p>
+                                        </div>
+                                        <div class="row" *ngFor="let contact of csContactModelData">
+                                            <div class="section-ttl mt-2">
+                                                <h2>Contact</h2>
+                                            </div>
+                                            <p>Contact Person First Name : {{contact?.csContactFirstName}}</p>
+                                            <p>Contact Person Middle Name : {{contact?.csContactMiddleName}}</p>
+                                            <p>Contact Person Last Name : {{contact?.csContactLastName}}</p>
+                                            <p>Contact Person Address : {{contact?.csContactAddress1}}</p>
+                                            <p>Contact Person Email Address : {{contact?.csContactEmailAddress1}}</p>
+                                            <p>Contact Person Phone Number : {{contact?.csContactPhone1}}</p>
+                                        </div>
+                                        <div class="row" *ngFor="let location of csLocationModelData">
+                                            <div class="section-ttl mt-2">
+                                                <h2>Locations</h2>
+                                            </div>
+                                            <p>Location Name : {{location?.csLocationName}}</p>
+                                            <p>Location Address : {{location?.csLocationAddress1}}</p>
+                                            <p>Location Email Address : {{location?.csLocationEmailAddress1}}</p>
+                                            <p>Location Phone Number : {{location?.csLocationPhone1}}</p>
+                                        </div>
+
+                                    </tab>
+                                </tabset>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div class="right-col">
+                       <button class="btn btn-primary2 d-inline-flex text-decoration-none w-100 text-start">
+                          <span class="icon-search-monitor"></span>
+                          Monitor
+                      </button> 
+                       <button class="btn btn-warning-dark d-inline-flex text-decoration-none w-100 text-start">
+                          <span class="icon-search-monitor"></span>
+                          Monitor
+                      </button> 
+                  </div> -->
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

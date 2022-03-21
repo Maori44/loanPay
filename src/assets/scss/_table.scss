@@ -1,0 +1,196 @@
+@import "../scss/theme/variables";
+
+.card-wrapper {
+  table {
+    margin-bottom: 0 !important;
+    tbody,
+    td,
+    tfoot,
+    th,
+    thead,
+    tr {
+      border-color: rgba(112, 112, 112, 0.36) !important;
+    }
+
+    th,
+    td {
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+    td {
+      color: rgba($base-color, 0.8);
+    }
+    thead {
+      tr {
+        th {
+          font-size: 16px;
+          font-weight: bold;
+          padding: 18px 16px !important;
+          color: $base-color;
+        }
+        th.action-col {
+          width: 100px;
+        }
+      }
+    }
+    tbody {
+      tr {
+        &:hover {
+          box-shadow: 0 3px 12px #00000029;
+        }
+        td {
+          padding: 0.5rem 16px !important;
+          @media (max-width: 767px) {
+            padding: 0.5rem 15px !important;
+          }
+          .btn.status {
+            font-size: 14px;
+            pointer-events: none;
+            padding: 2px 15px;
+            min-width: 78px;
+          }
+        }
+        .status-cell {
+          color: rgba(255, 255, 255, 0.8);
+          padding: 0 8px;
+          border-radius: 4px;
+          min-width: 77px;
+          text-align: center;
+        }
+      }
+    }
+
+    .list-check-col {
+      width: 52px;
+      padding-right: 0 !important;
+      .checkbox-cell {
+        .icon {
+          margin-right: 0;
+        }
+      }
+    }
+    .icons-cell {
+      width: 38px;
+      height: 38px;
+      background-color: #fafafa;
+      border: 1px solid #dcdcdc;
+      margin-right: 10px;
+      flex-shrink: 0;
+    }
+    .action-cell {
+      display: inline-flex;
+      align-items: center;
+      a {
+        display: inline-flex;
+        margin: 0 7px;
+        color: $primary;
+        span {
+          font-size: 18px;
+        }
+      }
+    }
+    .database {
+      color: $warning;
+    }
+    .mail {
+      color: $base-color;
+    }
+    // for testing purpose
+    .delete {
+      color: $danger-dark;
+      span {
+        font-size: 18px;
+      }
+      .edit {
+        span {
+          font-size: 17px;
+        }
+      }
+      .database {
+        color: $warning;
+      }
+      .mail {
+        color: $base-color;
+      }
+      .delete {
+        color: $danger-dark;
+        span {
+          font-size: 18px;
+        }
+      }
+      .resend {
+        img {
+          width: 20px;
+        }
+      }
+      .clock {
+        span {
+          font-size: 16px;
+        }
+      }
+      .hamburger {
+        span {
+          font-size: 14px;
+        }
+      }
+    }
+    .toggle-cell {
+      width: 94px;
+      font-size: 12px;
+      font-weight: bold;
+      color: #333;
+      text-decoration: none;
+      padding: 0;
+      height: 30px;
+      &:hover,
+      &:focus {
+        color: $base-color;
+      }
+      .toggle-cell-inner {
+        transition: all ease 0.3s 0s;
+        .toggle-cell-rw {
+          background-color: #fff;
+          span {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+          }
+          .text {
+            border: 1px solid #dbd2d2;
+            min-width: 70px;
+          }
+          .icn {
+            width: 22px;
+            background: #ddd;
+            font-size: 10px;
+            color: #fff;
+          }
+        }
+      }
+      .toggle-cell-inner.flip {
+        transform: translateX(-100%);
+      }
+    }
+  }
+  .list-dropdown-rw {
+    @media (max-width: 550px) {
+      flex-direction: column;
+    }
+    .right-col {
+      padding-left: 20px;
+      .btn {
+        min-width: 113px;
+      }
+    }
+  }
+  .list-move-blc {
+    padding-left: 15px;
+  }
+}
+
+.card-wrapper > .inner-body.padd {
+  .table-responsive {
+    margin: 0 -10px;
+  }
+}

@@ -1,0 +1,40 @@
+@import "../scss/theme/variables";
+.pagination-wrapper {
+  @media (max-width: 640px) {
+    flex-direction: column;
+    align-items: flex-start !important;
+  }
+  .left {
+    margin-right: 20px;
+    @media (max-width: 640px) {
+      margin-right: 0;
+      margin-left: 12px;
+    }
+  }
+  .right {
+    @media (max-width: 640px) {
+      margin-left: unset !important;
+    }
+    .pagination {
+      margin-bottom: 0;
+      flex-wrap: wrap;
+      .page-item {
+        .page-link {
+          border: none;
+          background-color: transparent;
+          color: $base-color;
+          &:hover,
+          &:focus {
+            color: $primary;
+          }
+        }
+      }
+      .page-item.active {
+        .page-link {
+          font-weight: bold;
+          color: $primary;
+        }
+      }
+    }
+  }
+}

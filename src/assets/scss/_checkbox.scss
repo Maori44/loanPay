@@ -1,0 +1,82 @@
+@import "../scss/theme/variables";
+
+.checkbox-cell {
+  position: relative;
+  cursor: pointer;
+  color: $base-color !important;
+  &:hover {
+    .icon {
+      border: 1px solid $primary !important;
+    }
+  }
+  input {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  span {
+    display: inline-flex;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+    background-color: #fff;
+    border: 1px solid rgba($base-color, 0.62);
+    margin-right: 17px;
+    flex-shrink: 0;
+
+    @media (max-width: 767px) {
+      margin-right: 10px;
+    }
+
+    span {
+      visibility: hidden;
+      font-size: 11px;
+      font-weight: bold;
+      color: rgba($base-color, 0.62);
+    }
+  }
+  input:checked + .icon {
+    background-color: $primary2;
+    border-color: $primary;
+    span {
+      visibility: visible;
+      color: #fff;
+    }
+  }
+}
+.checkbox-cell.no-label {
+  .icon {
+    margin-right: 0;
+  }
+}
+.checkbox-cell.type2 {
+  .icon {
+    border: 1px solid #b2abab;
+    border-radius: 3px;
+    span {
+      color: #fff;
+    }
+  }
+  input:checked + .icon {
+    background-color: $primary2;
+    border-color: transparent;
+  }
+}
+.checkbox-cell.with-form-lbl {
+  margin-top: 10px;
+}
+
+// Size
+.checkbox-cell.md {
+  font-size: 14px;
+  .icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    span {
+      font-size: 9px;
+    }
+  }
+}

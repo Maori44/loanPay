@@ -1,0 +1,43 @@
+<div class="dialogBoxInfo">
+
+    <h2>{{_data.header}}</h2>
+
+    <div class="close-btn">
+        <button (click)="onClose()">
+            <i class="material-icons">close</i>
+        </button>
+    </div>
+
+    <div mat-dialog-content>
+        <div class="confirm-dialog-section">
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <p> {{_data.message}}</p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div mat-dialog-content *ngIf="_data.commentShow">
+        <div class="confirm-dialog-section">
+            <div class="row">
+
+                <div class="col-sm-12">
+                    <p>
+                        <label for="fname">Please specify comment: </label>
+                        <textarea #commentInput id="comment" name="comment" rows="4" cols="70"></textarea>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="submit_referal">
+        <button mat-raised-button class="close-btn-modal ml-2 btn-outline-info btn-space"
+            (click)="onClose()">Close</button>
+        <button mat-raised-button class="save-btn-modal mr-2 btn-outline-danger" (click)="onConfirm()"
+            *ngIf="_data.confirmButtonShow">Confirm</button>
+    </div>
+</div>

@@ -1,0 +1,52 @@
+@import "../scss/theme/variables";
+
+.user-pic-blc {
+  .user-pic {
+    margin-bottom: 16px;
+    .pic-cell {
+      margin-bottom: 8px;
+      width: 132px;
+      height: 132px;
+      outline: 1px solid #616161;
+      border: 1px solid #fff;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .txt-cell {
+      font-size: 18px;
+    }
+  }
+  .upload-btn {
+    cursor: pointer;
+    * {
+      cursor: pointer;
+    }
+    input {
+      opacity: 0;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}
+.user-pic-blc.organization {
+  .btn {
+    background-color: #09466d;
+    color: #fff;
+    &:hover,
+    &:focus {
+      background-color: #125b88;
+      color: #fff;
+    }
+  }
+}
+
+.user-pic-blc.account-tab {
+  @media (max-width: 767px) {
+    margin-bottom: 25px;
+  }
+}

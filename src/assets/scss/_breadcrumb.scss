@@ -1,0 +1,17 @@
+@import "../scss/theme/variables";
+
+.breadcrumb {
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: $primary;
+    a {
+      color: $base-color;
+    }
+  }
+  .breadcrumb-item + .breadcrumb-item::before {
+    font-family: "icomoon";
+    font-size: 10px;
+    content: "\e959";
+  }
+}

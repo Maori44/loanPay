@@ -1,0 +1,131 @@
+<div class="page-inner" *ngIf="this.inviteStatusData">
+    <section class="section-row">
+        <div class="inner-body padd2">
+            <div class="tab-inner">
+                <section class="section-row">
+                    <div class="card-wrapper" *ngFor="let item of inviteStatusData">
+                        <div class="head-blc d-flex align-items-center">
+                            <h2>{{item?.csCode}}</h2>
+                            <div class="right-col ms-auto">
+                                <label class="location-lbl">
+                                    Locations:<span>{{item.csLocationName}}</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="inner-body padd">
+                            <div class="invite-wrapper">
+                                <div class="invite-section layout-md">
+                                    <div class="head">
+                                        <h2>{{item?.csTitle}}</h2>
+                                        <p>
+                                            {{item?.csShortDescription}}
+                                        </p>
+                                    </div>
+                                    <div class="info-row d-flex card-wrapper2 shadow ">
+                                        <div class="left-col info-col d-flex flex-wrap">
+                                            <label class="d-inline-flex">
+                                                <span *ngIf="item.inviteStatus==1">
+                                                    Accepted By:
+                                                </span>
+                                                <span *ngIf="item.inviteStatus==2">
+                                                    Pending By:
+                                                </span>
+                                                <span *ngIf="item.inviteStatus==3">
+                                                    Declined By:
+                                                </span>
+                                                {{item?.croName}}
+                                            </label>
+
+                                            <label class="d-inline-flex">                                                
+                                                <span *ngIf="item.inviteStatus==1">
+                                                    Accepted Date:
+                                                </span>
+                                                <!-- <span *ngIf="item.inviteStatus==2">
+                                                    Pending Date:
+                                                </span> -->
+                                                <span *ngIf="item.inviteStatus==3">
+                                                    Declined Date:
+                                                </span>
+                                                {{item?.inviteAcceptDate | date: 'short'}}
+                                            </label>
+
+                                            <label class="d-inline-flex">
+                                            
+                                                <span>
+                                                    Invite Status:
+                                                </span>
+
+                                                <span *ngIf="item.inviteStatus==1" class="text-success">Accepted</span>
+                                                <span *ngIf="item.inviteStatus==2" class="text-info">Pending</span>
+                                                <span *ngIf="item.inviteStatus==3" class="text-danger">Declined</span>
+
+                                                <!-- {{item.inviteStatus}} -->
+                                                <!-- <span   [ngClass]="{'text-success': item?.isActive  == true, 'text-danger': item?.isActive  == false}" 
+                                                                > {{item.inviteStatus == true ? 'Accepted' : 'Accepted'}}</span> -->
+
+                                            </label>
+
+                                            <label class="d-inline-flex">
+                                                <span>
+                                                    Org Name:
+                                                </span>
+                                                {{item?.organizationName}}
+                                            </label>
+                                            <label class="d-inline-flex">
+                                                <span>
+                                                    Conditions:
+                                                </span>
+                                                {{item?.csConditionOrDiseaseText}}
+                                            </label>
+                                            <div class="left-col info-col d-flex flex-wrap col-sm-12">
+                                            <label *ngIf="item?.inviteStatusComment"><br>
+                                                <span>
+                                                    Comment:
+                                                </span>
+                                                {{item?.inviteStatusComment}}
+                                            </label>
+                                            </div>
+                                       
+                                        </div>
+                                        <!-- <div class="right-col text-end ms-auto">
+                                            <button class="btn btn-primary">
+                                                                Monitor
+                                                            </button>
+                                        </div> -->
+
+                                        <div class="right-col text-end ms-auto">
+                                            <button *ngIf="item.inviteStatus==1"
+                                                (click)="upLoadConsent(item.pkCROStudyInviteID,loginUserId,studyId)"
+                                                text="Upload Consent" 
+                                                class="eye btn btn-link shadow-none text-decoration-none d-inline-flex">
+                                                <span class="icon-task-doc"></span>
+                                            </button>
+                                            
+
+                                        </div>
+                                        
+                                        <!-- <div  class="col-sm-3">
+                                            <label class="d-inline-flex" *ngIf="item?.inviteStatusComment">
+                                                <span>
+                                                    Comment:
+                                                </span>
+                                                {{item?.inviteStatusComment}}
+                                            </label>
+                                        </div> -->
+
+                                    </div>
+                                  
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </section>
+</div>
+<div *ngIf="this.inviteStatusData==null || this.inviteStatusData.length==0">
+    <p style="text-align: center;"> No Data Exists.</p>
+</div>

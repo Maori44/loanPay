@@ -1,0 +1,18 @@
+export const endpointSponsor = {
+    GetSponsorList: "api/Sponsor/GetSponserList", 
+    GetCROListForInvites:"api/Sponsor/GetCROListForInvites",
+    GetCROInviteListForStudies:"api/Sponsor/GetCROInviteListForStudies",
+    GetCSStudyDetails:"api/Sponsor/GetCSStudyDetails",
+    SendCROInvitationForStudy:"api/Sponsor/CSStudySendInviteCRO",
+    SendCROInvitationAcceptenceStatusForStudy:"api/CRO/InviteCSStudyAccept",
+    GetInviteStatusBySponsorId:"api/Sponsor/CROInviteStatusCSStudy",
+    SearchStudyByStudyCodeOrTitle:"api/Sponsor/SearchStudy",
+    SaveConsentForm: "api/Sponsor/UploadConsentForm",
+    GetSponsor: "api/Sponsor/GetSponser", 
+    SaveSponsor: "api/Sponsor/SaveSponser", 
+    UpdateSponsor: "api/Sponsor/UpdateSponser", 
+    DeleteSponsor: "api/Sponsor/DeleteSponser", 
+    SearchSponsor: "api/Sponsor/SearchSponser", 
+    SaveAdmin : "api/Sponsor/AdminInvite",
+    UpdateAdmin : "api/Sponsor/UpdateAdminInvite",
+}

@@ -1,0 +1,41 @@
+@import "./_variables";
+
+.text-primary {
+  color: $primary !important;
+}
+.text-primary-dark {
+  color: $primary-dark !important;
+}
+
+.text-primary2 {
+  color: $primary2 !important;
+}
+.text-primary2-dark {
+  color: $primary2-dark !important;
+}
+
+// .text-secondary {
+//   color: $secondary !important;
+// }
+
+.text-success {
+  color: $success !important;
+}
+
+.text-danger {
+  color: $danger !important;
+}
+.text-danger-dark {
+  color: $danger-dark !important;
+}
+
+.text-warning {
+  color: $warning !important;
+}
+.text-warning-dark {
+  color: $warning-dark !important;
+}
+
+.text-info {
+  color: $info !important;
+}

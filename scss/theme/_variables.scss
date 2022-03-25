@@ -1,0 +1,50 @@
+// Color-Variables
+$blue: #3796d2 !default;
+$blue-dark: #2d87c0 !default;
+
+$blue2: #539dfe !default;
+$blue2-dark: #2e7add !default;
+
+$grey: #c8c8c8 !default;
+$grey-dark: #b6b6b6 !default;
+
+$green: #65e2b3 !default;
+$green-dark: #11c15b !default;
+$green-dark-100: #06a84a !default;
+
+$yellow: #f9cc91 !default;
+$yellow-dark: #ffae44 !default;
+$yellow-dark-100: #ee9a2b !default;
+
+$purple: #a3a9f9 !default;
+
+$red: #f27878 !default;
+$red-dark: #ff5252 !default;
+$red-dark-100: #db3232 !default;
+
+$base-color: #333;
+
+$primary: $blue !default;
+$primary-dark: $blue-dark !default;
+
+$primary2: $blue2 !default;
+$primary2-dark: $blue2-dark !default;
+
+$secondary: $grey !default;
+$secondary-dark: $grey-dark !default;
+
+$warning: $yellow !default;
+$warning-dark: $yellow-dark !default;
+$warning-dark-100: $yellow-dark-100 !default;
+
+$info: $purple !default;
+
+$success: $green !default;
+$success-dark: $green-dark !default;
+$success-dark-100: $green-dark-100 !default;
+
+$danger: $red !default;
+$danger-dark: $red-dark !default;
+$danger-dark-100: $red-dark-100 !default;
+// Font-Family
+$primary-font: "Jost", sans-serif;

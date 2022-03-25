@@ -1,0 +1,195 @@
+@import "./theme/variables";
+
+.upload-wrapper {
+  .upload-cell {
+    margin-right: 52px;
+    .upload-btn {
+      width: 97px;
+      height: 97px;
+      border: 1px solid #707070;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: bold;
+      margin-bottom: 13px;
+      padding: 15px;
+      &:hover {
+        background-color: #f9f9f9;
+      }
+      input {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        cursor: pointer;
+      }
+    }
+    .msg {
+      font-size: 14px;
+      color: #9a9da1;
+    }
+  }
+}
+
+.form-btns {
+  .btn {
+    min-width: 113px;
+  }
+}
+.form-btns.multiple {
+  @media (max-width: 400px) {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .btn {
+    margin-left: 18px;
+    @media (max-width: 400px) {
+      margin: 0 0 7px !important;
+    }
+  }
+}
+.form-btns.multiple.left-align {
+  .btn {
+    margin-left: 0;
+    margin-right: 18px;
+  }
+}
+.login-link-rw {
+  a {
+    color: $base-color;
+
+    &:hover,
+    &:focus {
+      color: $primary;
+    }
+  }
+}
+
+.add-input-item {
+  .right-col {
+    margin-top: 32px;
+    padding-left: 6px;
+    .btn {
+      padding: 8px 10px;
+    }
+    .btn.add {
+      color: $base-color;
+    }
+  }
+}
+.add-input-item.profile {
+  @media (max-width: 991px) {
+    flex-direction: column;
+    background: #fafafa;
+    border: 1px solid #eee;
+    margin: 0 10px 15px 10px;
+    border-radius: 6px;
+    width: calc(100% - 20px);
+    .right-col {
+      align-items: center !important;
+      margin-top: 0;
+      .btn {
+        padding: 8px 10px;
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border: 1px solid #ddd;
+        margin: 0 12px 15px 0;
+        border-radius: 50%;
+        span {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+// Form-Style
+.form-group {
+  margin-bottom: 24px;
+  @media (max-width: 1150px) {
+    margin-bottom: 16px;
+  }
+  .form-label,
+  label {
+    font-size: 18px;
+    font-weight: 400;
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 5px;
+  }
+
+  .input-cell {
+    .icon {
+      left: 17px;
+      top: 0;
+      bottom: 0;
+      font-size: 15px;
+
+      svg {
+        width: 18px;
+        fill: #000;
+      }
+    }
+
+    .form-control {
+      padding-left: 50px;
+    }
+  }
+  .input-cell.right {
+    .icon {
+      left: auto;
+      right: 17px;
+    }
+    .form-control {
+      padding-left: 17px;
+      padding-right: 50px;
+    }
+  }
+  .input-cell.pass {
+    .form-control {
+      padding-right: 50px;
+    }
+
+    .btn {
+      top: 0;
+      right: 0;
+      bottom: 0;
+
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+}
+.form-group.no-label {
+  margin-top: 32px;
+}
+
+.browse-input {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+}
+
+// Time-Calendar Group Input Column
+.time-date-rw {
+  margin: 0 -14px;
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+  .form-group {
+    max-width: 250px;
+    width: 100%;
+    padding: 0 14px;
+    @media (max-width: 480px) {
+      max-width: none;
+      padding: 0 14px;
+    }
+  }
+}

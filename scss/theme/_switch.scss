@@ -1,0 +1,25 @@
+@import './_variables.scss';
+
+.custom-switch .custom-control-label::before {
+    background-color: #ADB9C7;
+    border-color    : #ADB9C7;
+    width           : 34px;
+    height          : 20px;
+    border-radius   : 10px;
+}
+
+.custom-switch .custom-control-label::after {
+    background-color: #fff;
+    width           : calc(20px - 3px);
+    height          : calc(20px - 4px);
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+    background  : transparent linear-gradient(180deg, $primary 0%, $secondary2 100%) 0% 0% no-repeat padding-box;
+    border-color: transparent;
+}
+
+.custom-switch .custom-control-label {
+    line-height : 29px;
+    padding-left: 14px;
+}

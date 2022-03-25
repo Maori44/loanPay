@@ -1,0 +1,110 @@
+@import "../scss/theme/variables";
+.dropdown-item.active,
+.dropdown-item:active {
+  color: #fff;
+  text-decoration: none;
+  background-color: $primary;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+//////////////////////////// Style ////////////////////////////////
+.dropdown-item {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.more-dropdown-blc {
+  > .btn {
+    transform: rotate(90deg);
+
+    svg {
+      fill: #fff;
+    }
+  }
+
+  .dropdown-menu {
+    padding: 7px 10px;
+    width: 134px;
+    min-width: auto;
+    margin-top: 0;
+    border-radius: 15px;
+
+    .dropdown-item {
+      padding: 0.25rem 5px;
+      display: flex;
+      align-items: center;
+      line-height: normal;
+
+      &:hover,
+      &:focus {
+        color: $primary;
+
+        .icon {
+          svg {
+            fill: $primary;
+          }
+        }
+      }
+
+      .icon {
+        width: 22px;
+        display: inline-flex;
+        align-items: center;
+
+        svg {
+          width: 15px;
+        }
+      }
+
+      .icon.share-line {
+        svg {
+          fill: none;
+          stroke: $base-color;
+        }
+      }
+
+      .icon.share {
+        svg {
+          width: 19px;
+        }
+      }
+
+      .icon.save {
+        svg {
+          width: 13px;
+        }
+      }
+
+      .icon.share {
+        svg {
+          width: 16px;
+        }
+      }
+    }
+
+    .dropdown-item.text-danger {
+      .icon {
+        svg {
+          fill: $danger;
+        }
+      }
+    }
+  }
+}
+
+.more-dropdown-blc.black {
+  > .btn {
+    svg {
+      fill: $base-color;
+    }
+  }
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+  color: $base-color;
+  background-color: #f3f7f9;
+}

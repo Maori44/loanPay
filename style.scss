@@ -46,7 +46,7 @@
 
       @media (max-width: 991px) {
         max-width: 300px;
-        margin-right: 30px;
+        margin-right: 0px;
       }
 
       @media (max-width: 767px) {
@@ -213,6 +213,22 @@
     }
   }
 }
+
+.signUpClass{
+  color: #3796d2 !important;
+  font-size: large !important;
+}
+
+::placeholder {
+  color: #3796d2 !important;
+  opacity: 1 !important; /* Firefox */
+}
+
+.anchor{
+  color:#3796d2 !important;
+  text-decoration: underline !important;
+}
+
 
 
 @import "./scss/theme/input";

@@ -1,116 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-      <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
+  <link rel="stylesheet" href="build/css/intlTelInput.css">
+  <link rel="stylesheet" href="build/css/demo.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-  
-    <title>Document</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./style.css">
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <title>Document</title>
 </head>
+
 <body>
-    <div class="login-wrapper d-flex flex-column flex-fill position-relative">
-      <div class="top-pic position-absolute">
-      </div>
-        <div class="container m-auto">
-          <div class="loign-rw d-flex align-items-center">
-            <div class="login-lft">
-              <img src="./assets/logo.jpg" class="w-50 rounded-circle" alt="" srcset="">     
-            </div>
-            <div class="login-rt">
-              <div class="login-bx">
-                <h3>Login to access your account</h3>
-                <div class="inner-blc">
-                  <form>
-                    <div class="form-group">
-                      <label for="email">Username<span class="text-danger">*</span></label>
-                      <div class="input-cell d-flex position-relative">
-                        <span class="position-absolute d-inline-flex align-items-center justify-content-center icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="19.058" height="14.294" viewBox="0 0 19.058 14.294">
-                            <path id="envelope"
-                              d="M17.271,59.882H1.787A1.789,1.789,0,0,0,0,61.669v10.72a1.789,1.789,0,0,0,1.787,1.787H17.271a1.789,1.789,0,0,0,1.787-1.787V61.669A1.789,1.789,0,0,0,17.271,59.882Zm0,1.191a.592.592,0,0,1,.228.046L9.529,68.027,1.558,61.119a.593.593,0,0,1,.228-.046Zm0,11.911H1.787a.6.6,0,0,1-.6-.6V62.378l7.948,6.888a.6.6,0,0,0,.781,0l7.948-6.888V72.389A.6.6,0,0,1,17.271,72.984Z"
-                              transform="translate(0 -59.882)" />
-                          </svg>
-                        </span>
-                        <input type="email" class="form-control" id="email" required>
-                      </div>
-                    </div>
-                    <div class="form-group">
-                      <label for="password">Password<span class="text-danger">*</span></label>
-                      <div class="input-cell pass d-flex position-relative">
-                        <span class="position-absolute d-inline-flex align-items-center justify-content-center icon">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22.588" viewBox="0 0 18 22.588">
-                            <g id="lock" transform="translate(-52)">
-                              <g id="Group_69" data-name="Group 69" transform="translate(52)">
-                                <g id="Group_68" data-name="Group 68" transform="translate(0)">
-                                  <path id="Path_1168" data-name="Path 1168"
-                                    d="M67.353,8.294h-1.59V4.666a4.766,4.766,0,0,0-9.529,0V8.294H54.647A2.65,2.65,0,0,0,52,10.941v9a2.65,2.65,0,0,0,2.647,2.647H67.353A2.65,2.65,0,0,0,70,19.941v-9A2.65,2.65,0,0,0,67.353,8.294ZM58,4.666a3,3,0,0,1,6,0V8.294H58ZM68.235,19.941a.883.883,0,0,1-.882.882H54.647a.883.883,0,0,1-.882-.882v-9a.883.883,0,0,1,.882-.882H67.353a.883.883,0,0,1,.882.882Z"
-                                    transform="translate(-52)" />
-                                </g>
-                              </g>
-                              <g id="Group_71" data-name="Group 71" transform="translate(59.368 12.618)">
-                                <g id="Group_70" data-name="Group 70" transform="translate(0)">
-                                  <path id="Path_1169" data-name="Path 1169"
-                                    d="M220.632,286a1.632,1.632,0,0,0-.884,3v1.937a.882.882,0,0,0,1.765,0v-1.935a1.632,1.632,0,0,0-.881-3.006Z"
-                                    transform="translate(-219 -286)" />
-                                </g>
+  <div class="login-wrapper d-flex flex-column flex-fill position-relative">
+    <div class="top-pic position-absolute">
+    </div>
+    <div class="container m-auto">
+      <div class="loign-rw d-flex align-items-center">
+        <div class="login-lft text-center">
+          <img src="./assets/logo.jpg" class="w-50 rounded-circle" alt="" srcset="">
+        </div>
+        <div class="login-rt">
+          <div class="login-bx">
+            <h3>Login to access your account</h3>
+            <div class="inner-blc">
+              <form>
+                <div class="form-group">
+                  <label for="email">Mobile Number<span class="text-danger">*</span></label>
+                  <input class="form-control" id="phone" name="phone" type="tel">
+                </div>             
+                <div class="form-group">
+                  <label for="password">Password<span class="text-danger">*</span></label>
+                  <div class="input-cell pass d-flex position-relative">
+                    <span class="position-absolute d-inline-flex align-items-center justify-content-center icon">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="18" height="22.588" viewBox="0 0 18 22.588">
+                        <g id="lock" transform="translate(-52)">
+                          <g id="Group_69" data-name="Group 69" transform="translate(52)">
+                            <g id="Group_68" data-name="Group 68" transform="translate(0)">
+                              <path id="Path_1168" data-name="Path 1168"
+                                d="M67.353,8.294h-1.59V4.666a4.766,4.766,0,0,0-9.529,0V8.294H54.647A2.65,2.65,0,0,0,52,10.941v9a2.65,2.65,0,0,0,2.647,2.647H67.353A2.65,2.65,0,0,0,70,19.941v-9A2.65,2.65,0,0,0,67.353,8.294ZM58,4.666a3,3,0,0,1,6,0V8.294H58ZM68.235,19.941a.883.883,0,0,1-.882.882H54.647a.883.883,0,0,1-.882-.882v-9a.883.883,0,0,1,.882-.882H67.353a.883.883,0,0,1,.882.882Z"
+                                transform="translate(-52)" />
+                            </g>
+                          </g>
+                          <g id="Group_71" data-name="Group 71" transform="translate(59.368 12.618)">
+                            <g id="Group_70" data-name="Group 70" transform="translate(0)">
+                              <path id="Path_1169" data-name="Path 1169"
+                                d="M220.632,286a1.632,1.632,0,0,0-.884,3v1.937a.882.882,0,0,0,1.765,0v-1.935a1.632,1.632,0,0,0-.881-3.006Z"
+                                transform="translate(-219 -286)" />
+                            </g>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                    <input type="password" class="form-control" id="password">
+                    <button type="button"
+                      class="btn btn-link position-absolute d-inline-flex align-items-center justify-content-center shadow-none">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16.739" height="10.669"
+                        viewBox="0 0 16.739 10.669">
+                        <g id="Group_9152" data-name="Group 9152" transform="translate(0 -2)">
+                          <g id="view" transform="translate(0 2)">
+                            <g id="Group_6" data-name="Group 6" transform="translate(0 0)">
+                              <g id="Group_5" data-name="Group 5">
+                                <path id="Path_5" data-name="Path 5"
+                                  d="M16.633,97.844c-.15-.2-3.713-5.009-8.263-5.009S.256,97.639.106,97.844a.552.552,0,0,0,0,.651c.149.2,3.713,5.009,8.263,5.009s8.114-4.8,8.263-5.009A.552.552,0,0,0,16.633,97.844ZM8.369,102.4c-3.352,0-6.255-3.189-7.115-4.231.858-1.043,3.755-4.23,7.115-4.23s6.255,3.188,7.115,4.231C14.626,99.213,11.729,102.4,8.369,102.4Z"
+                                  transform="translate(0 -92.835)" />
                               </g>
                             </g>
-                          </svg>
-                        </span>
-                        <input type="password" class="form-control" id="password">
-                        <button type="button"
-                          class="btn btn-link position-absolute d-inline-flex align-items-center justify-content-center shadow-none">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="16.739" height="10.669" viewBox="0 0 16.739 10.669">
-                            <g id="Group_9152" data-name="Group 9152" transform="translate(0 -2)">
-                              <g id="view" transform="translate(0 2)">
-                                <g id="Group_6" data-name="Group 6" transform="translate(0 0)">
-                                  <g id="Group_5" data-name="Group 5">
-                                    <path id="Path_5" data-name="Path 5"
-                                      d="M16.633,97.844c-.15-.2-3.713-5.009-8.263-5.009S.256,97.639.106,97.844a.552.552,0,0,0,0,.651c.149.2,3.713,5.009,8.263,5.009s8.114-4.8,8.263-5.009A.552.552,0,0,0,16.633,97.844ZM8.369,102.4c-3.352,0-6.255-3.189-7.115-4.231.858-1.043,3.755-4.23,7.115-4.23s6.255,3.188,7.115,4.231C14.626,99.213,11.729,102.4,8.369,102.4Z"
-                                      transform="translate(0 -92.835)" />
-                                  </g>
-                                </g>
-                                <g id="Group_8" data-name="Group 8" transform="translate(5.058 2.023)">
-                                  <g id="Group_7" data-name="Group 7" transform="translate(0 0)">
-                                    <path id="Path_6" data-name="Path 6"
-                                      d="M158.033,154.725a3.311,3.311,0,1,0,3.311,3.311A3.315,3.315,0,0,0,158.033,154.725Zm0,5.518a2.207,2.207,0,1,1,2.207-2.207A2.21,2.21,0,0,1,158.033,160.243Z"
-                                      transform="translate(-154.722 -154.725)" />
-                                  </g>
-                                </g>
+                            <g id="Group_8" data-name="Group 8" transform="translate(5.058 2.023)">
+                              <g id="Group_7" data-name="Group 7" transform="translate(0 0)">
+                                <path id="Path_6" data-name="Path 6"
+                                  d="M158.033,154.725a3.311,3.311,0,1,0,3.311,3.311A3.315,3.315,0,0,0,158.033,154.725Zm0,5.518a2.207,2.207,0,1,1,2.207-2.207A2.21,2.21,0,0,1,158.033,160.243Z"
+                                  transform="translate(-154.722 -154.725)" />
                               </g>
                             </g>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                    <div class="form-group login-link-rw d-flex position-relative">
-                      <label class="checkbox-cell d-flex align-items-center">
-                        <input type="checkbox" name="remember" class="position-absolute">
-                        <span class="d-inline-flex align-items-center justify-content-center icon">
-                          <span class="icon-check"></span>
-                        </span>
-                        <span class="txt">Remember me</span>
-                      </label>
-                      <a class="ms-auto" *ngIf="role != 1">
-                        Forgot Password?
-                      </a>
-                    </div>
-                    <div class="form-group login-link-rw d-flex">
-                      <button type="submit" class="btn btn-primary flex-fill">Login</button>
-                    </div>
-                  </form>
+                          </g>
+                        </g>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-              </div>
+                <div class="form-group login-link-rw d-flex position-relative">
+                  <label class="checkbox-cell d-flex align-items-center">
+                    <input type="checkbox" name="remember" class="position-absolute">
+                    <span class="d-inline-flex align-items-center justify-content-center icon">
+                      <span class="icon-check"></span>
+                    </span>
+                    <span class="txt">Show Password</span>
+                  </label>
+                </div>
+                <div class="form-group login-link-rw d-flex">
+                  <button type="submit" class="btn btn-primary rounded-pill flex-fill">Login</button>
+                </div>
+                <label class="signUpClass" for="sign-up">Not a Member Yet? Sign Up Here.</label>
+              </form>
             </div>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <script src="build/js/intlTelInput.js"></script>
+  <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+    //   allowDropdown: false,
+    //   autoHideDialCode: false,
+    //   autoPlaceholder: "off",
+    //   dropdownContainer: document.body,
+    //   excludeCountries: ["us"],
+    //   formatOnDisplay: false,
+    //   geoIpLookup: function(callback) {
+    //     $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+    //       var countryCode = (resp && resp.country) ? resp.country : "";
+    //       callback(countryCode);
+    //     });
+    //   },
+    //  hiddenInput: "full_number",
+    //   initialCountry: "auto",
+    //   localizedCountries: { 'de': 'Deutschland' },
+    //   nationalMode: false,
+    //   onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+    //   placeholderNumberType: "MOBILE",
+    //   preferredCountries: ['cn', 'jp'],
+       separateDialCode: true,
+      utilsScript: "build/js/utils.js",
+    });
+  </script>
 </body>
+
 </html>

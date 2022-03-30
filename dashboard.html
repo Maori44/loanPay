@@ -17,16 +17,18 @@
   <title>Document</title>
 </head>
 
-<body>
+<body>  
   <div class="login-wrapper d-flex flex-column flex-fill position-relative">
-    <div class="top-pic position-absolute">
-    </div>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand text-light">Loan-Pe</a>
+        <form class="d-flex">      
+          <img src="./assets/logo.jpg" class="rounded-circle" alt="" srcset=""  width="50" height="40">
+        </form>
+      </div>
+    </nav>
     <div class="container m-auto">
-      <div class="loign-rw d-flex align-items-center">
-        <div class="login-lft text-center">
-          <!-- <h6>Welcome to </h6> -->
-          <img src="./assets/logo.jpg" class="w-50 rounded-circle" alt="" srcset="">
-        </div>
+      <div class="loign-rw d-flex align-items-center justify-content-center">
         <div class="login-rt">
           <div class="login-bx">
             <div class="signUpClass text-center mb-3">
@@ -37,17 +39,18 @@
                 for customer loan. </label>
 
               <div class="form-group login-link-rw d-flex mt-3">
-                <button type="submit" class="btn btn-primary rounded-pill flex-fill">Loan Application</button>
+                <button type="submit" class="btn btn-primary rounded-pill flex-fill loan_button">Loan Application</button>
               </div>
-              <div class="form-group login-link-rw d-flex mt-3">
-                <button type="submit" class="btn btn-danger rounded-pill flex-fill">Logout</button>
-              </div>
+              
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="btm-pic position-absolute">
+      <div class="form-group login-link-rw d-flex m-3 float-end">
+        <button disabled type="submit" class="btn btn-danger rounded-pill">Logout</button>
+      </div>
     </div>
   </div>
 </body>

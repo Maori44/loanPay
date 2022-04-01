@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css" />
+    <link rel="stylesheet" href="build/css/intlTelInput.css">
+    <link rel="stylesheet" href="build/css/demo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="login-wrapper d-flex flex-column flex-fill position-relative">
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand text-light">Loan-Pe</a>
+              <form class="d-flex">      
+                <img src="./assets/logo.jpg" class="rounded-circle" alt="" srcset=""  width="50" height="40">
+              </form>
+            </div>
+          </nav>
+        <div class="container m-auto">
+            <div class="loign-rw d-flex align-items-center justify-content-center">               
+                <div class="login-rt">
+                    <div class="login-bx">
+                        <h3>Register to access your account</h3>
+                        <div class="inner-blc">
+                            <form>
+                                <div class="purchase_block">
+                                    <h5>Purchase details :</h5>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Item Name *"
+                                            formControlName="itemName">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="name" placeholder="Loan Ammount *"
+                                            formControlName="loanAmount">
+                                    </div>
+                                </div>
+                                <h5>Customer details :</h5>
+                                <div class="form-group">
+                                    <label class="form-check-label" for="inlineRadio2">Regular Customer: </label>
+                                    <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                                        <input type="radio" class="form-check-input m-2" name="btnradio1"
+                                            id="btnradio1" checked formControlName="btnradio1">
+                                        <label class="form-check-label" for="inlineRadio1">Yes</label>
+                                        <input type="radio" class="form-check-input m-2" name="btnradio2"
+                                            id="btnradio2" formControlName="btnradio2">
+                                        <label class="form-check-label" for="btnradio2">No</label>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Full Name *"
+                                        formControlName="fullName">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Email Address *"
+                                        formControlName="email">
+                                </div>
+                                <div class="form-group">                               
+                                    <input class="form-control" id="phone" name="phone" type="tel">
+                                  </div> 
+                                <div class="form-group">
+                                    <input class="form-control" id="date" type="text" placeholder="Date of Birth *"
+                                        onfocus="(this.type='date')" onblur="(this.type='text')" formControlName="dob">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-select form-control" formControlName="residence">
+                                        <option value="0" selected>Residence *</option>
+                                        <option value="1">Indian</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Address *"
+                                        formControlName="address">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="City *"
+                                        formControlName="city">
+                                </div>
+                                <div class="form-group">
+                                    <select class="form-select form-control" formControlName="state">
+                                        <option value="0" selected>State *</option>
+                                        <option value="1">Delhi</option>
+                                        <option value="1">Maharashtra</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Pincode *"
+                                        formControlName="pincode">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Pan No. *"
+                                        formControlName="pancard">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="name" placeholder="Aadhar No. *">
+                                </div>
+                                <div class="form-group login-link-rw d-flex">
+                                    <button type="submit" class="btn btn-primary rounded-pill flex-fill">Submit</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btm-pic position-absolute">
+        </div>
+    </div>
+    <script src="build/js/intlTelInput.js"></script>
+  <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+    //   allowDropdown: false,
+    //   autoHideDialCode: false,
+    //   autoPlaceholder: "off",
+    //   dropdownContainer: document.body,
+    //   excludeCountries: ["us"],
+    //   formatOnDisplay: false,
+    //   geoIpLookup: function(callback) {
+    //     $.get("http://ipinfo.io", function() {}, "jsonp").always(function(resp) {
+    //       var countryCode = (resp && resp.country) ? resp.country : "";
+    //       callback(countryCode);
+    //     });
+    //   },
+    //  hiddenInput: "full_number",
+    initialCountry: "IN",
+    //   localizedCountries: { 'de': 'Deutschland' },
+    //   nationalMode: false,
+    //   onlyCountries: ['us', 'gb', 'ch', 'ca', 'do'],
+    //   placeholderNumberType: "MOBILE",
+    //   preferredCountries: ['cn', 'jp'],
+       separateDialCode: true,
+      utilsScript: "build/js/utils.js",
+    });
+  </script>
+</body>
+
+</html>

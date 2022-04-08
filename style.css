@@ -1891,4 +1891,13 @@ app-root {
   font-size: larger;
 }
 
+/* Custom style */
+.accordion-button::after {
+  background-image: url('./assets/plus.png');
+  transform: scale(1.2) !important;
+}
+.accordion-button:not(.collapsed)::after {
+  background-image: url('./assets/minus.png');
+}
+
 /*# sourceMappingURL=style.css.map */
